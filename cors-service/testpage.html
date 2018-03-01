@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+  <style>
+    body {padding: 20px}
+  </style>
+  <title>Service Test</title>
+</head>
+
+<body>
+  <div>
+    <h1>Getting To A Service...</h1>
+  </div>
+  <div>
+    <p>
+      This is an example of getting a request from a web-based service. In most
+      cases, servers will prevent a request from a page/program that was not served
+      by itself - this is called a 'Cross-Origin Resource Sharing Violation'.
+    </p>
+    <p>
+      How do we get around it? There is a 'dance' that the server and requestor
+      go through in order to validate that a request is coming from a valid
+      service. By setting our server to allow CORS, we can get service content
+      from any location. We allow CORS through the server by using the <a href="https://www.npmjs.com/package/cors">cors</a> node package.
+    </p>
+    <p>
+      To see this in action - click this button:
+    </p>
+    <p>
+      <button type="button" onclick="loadDoc()">Request Data from /info/random()</button>
+    </p>
+    <p id="demo">(no data received...)</p>
+  </div>
+
+</div>
+
+<script>
+function loadDoc() {
+  var rnd = Math.ceil(Math.random() * 1000);
+  document.getElementById("demo").innerHTML =
+    "(requesting data from /info/" + rnd + ")";
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      let tmp = JSON.parse(this.responseText);
+      document.getElementById("demo").innerHTML =
+        "Data:" +
+        "<br />&nbsp;&nbsp;<u>" + tmp.msg + "</u>" +
+        "<br />&nbsp;&nbsp;Original Value: " + tmp.value +
+        "<br />&nbsp;&nbsp;Square Root: " + tmp.sqrt +
+        "<br />&nbsp;&nbsp;Rando Number: " + tmp.rando;
+    }
+  };
+  xhttp.open("GET", "http://localhost:3000/info/" + rnd, true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>
