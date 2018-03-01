@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>File-Upload</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div id="header">
+      <p class="top">File-Upload Example</p>
+      <p class="bottom">Upload an audio file to Max!</p>
+    </div>
+    <div id="content">
+      <div id="main-text">
+        <form ref='uploadForm'
+          id='uploadForm'
+          action='http://localhost:3000/upload'
+          method='post'
+          encType="multipart/form-data">
+            <input type="file" name="sampleFile" />
+            <br /><br />
+            <input type='submit' value='Upload!' />
+        </form>
+      </div>
+    </div>
+    <div id="status">
+    </div>
+  </body>
+</html>

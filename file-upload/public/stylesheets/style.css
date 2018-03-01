@@ -1,0 +1,137 @@
+/* The core style sheet for our test site */
+
+head {}
+
+body {
+background-color: #333333;
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+font-size: 1em;
+background-image: url('images/page-bg.gif');
+margin: 0;
+}
+
+#header {
+background-color: #6666AA;
+background-position: 10px center;
+padding-right: 20px;
+padding-left: 20px;
+padding-top: 0px;
+padding-bottom: 0px;
+color: #62666e;
+text-align: right;
+font-size: 20pt;
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+margin: 20px;
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
+border: 4px solid;
+border-color: #FFFFFF }
+
+.top {
+padding-top: 5px;
+font-size: 2.5em;
+margin: 0px;
+text-align: left;
+color: #ffffff; }
+
+.bottom {
+padding-bottom: 15px;
+font-style: italic;
+font-size: 0.7em;
+margin: 0px;
+text-align: left;
+color: #ffffff; }
+
+#content {
+width: auto; }
+
+#navbar {
+position: relative;
+float: right;
+border: 1px none;
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+background-color: #6666aa;
+margin-right: 24px;
+margin-top: 4px;
+padding-bottom: 20px;
+font-size: 1.2em;
+margin-left: 10px; }
+
+#navbar ul li {
+list-style-type: none;
+padding-top: 0px;
+padding-right: 20px;
+padding-bottom: 0px;
+padding-left: 20px;
+margin-top: 10px;
+font-size: 0.8em;
+color: #ffffff; }
+
+#navbar ul li a:link, #navbar ul li a:visited {
+display: block;
+font-weight: bold;
+padding-top: 0px;
+padding-bottom: 0px;
+padding-left: 0px;
+padding-right: 20px;
+color: #cccccc;
+text-decoration: none;
+font-size: 1.0em;
+font-style: italic; }
+
+#navbar ul li a:hover {
+text-decoration: underline;
+}
+
+#navbar ul li a:active {
+}
+
+#navbar ul {
+margin: 0px;
+padding: 0px;
+}
+
+
+#main-text {
+padding: 20px;
+z-index: 1;
+border: 4px #6666aa solid;
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
+background-color: #ffffff;
+margin-left: 20px;
+margin-right: 20px; }
+
+
+h1 {
+font-size: 1.5em;
+text-align: left;
+font-style: normal;
+color: #ffffff;
+background-color: #6666aa;
+text-decoration: none;
+width: 50%;
+padding-left: 10px;
+line-height: 1.5em;
+margin-left: -20px; }
+
+h2 {
+font-style: italic;
+font-size: 1em;
+}
+
+p {
+}
+
+p.footer {
+font-size: 1.0em;
+text-align: center;
+font-weight: bold; }
+
+.footer {}
+
+a {}
