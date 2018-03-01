@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // ---------------------------------------------------------------------
-// file-upload.js - the starter JS for the uploader Max project (as
+// file-upload.js - the starter JS for the file-upload Max project (as
 //                  created by the Express CLI).
 //
 // For the node app, check out the app.js at the top level directory.
