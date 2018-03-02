@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    <h1><b><%= title %></b></h1>
+    <table style="width:500px">
+      <tr>
+        <th>Item</th>
+        <th>Status</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td id="item_1"><b>Random</b></td>
+        <td id="status_1"><img src="/img/sl-green.png"></td>
+        <td id="value_1">0.00</td>
+      </tr>
+      <tr>
+        <td id="item_2"><b>Sine Wave</b></td>
+        <td id="status_2"><img src="/img/sl-green.png"></td>
+        <td id="value_2">0.00</td>
+      </tr>
+      <tr>
+        <td id="item_3"><b>Square Wave</b></td>
+        <td id="status_3"><img src="/img/sl-green.png"></td>
+        <td id="value_3">0.00</td>
+      </tr>
+    </table>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script>
+    <script src="/js/mySockets.js"></script>
+  </body>
+</html>
