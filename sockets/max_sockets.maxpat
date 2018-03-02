@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 63.0, 89.0, 789.0, 441.0 ],
+		"rect" : [ 49.0, 107.0, 789.0, 441.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,12 +38,160 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 8,
+							"minor" : 0,
+							"revision" : 0,
+							"architecture" : "x86",
+							"modernui" : 1
+						}
+,
+						"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 1,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
+						"boxanimatetime" : 200,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
+						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-36",
+									"linecount" : 2,
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 50.0, 146.5, 129.0, 35.0 ],
+									"presentation_linecount" : 2,
+									"presentation_rect" : [ 50.0, 146.5, 129.0, 35.0 ],
+									"style" : "",
+									"text" : ";\rmax launchbrowser $1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-21",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 50.0, 100.0, 116.0, 22.0 ],
+									"presentation_linecount" : 2,
+									"presentation_rect" : [ 50.0, 100.0, 116.0, 22.0 ],
+									"style" : "",
+									"text" : "http://localhost:8080"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-42",
+									"index" : 1,
+									"maxclass" : "inlet",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 50.0, 40.0, 30.0, 30.0 ],
+									"presentation_rect" : [ 50.0, 40.0, 30.0, 30.0 ],
+									"style" : ""
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-36", 0 ],
+									"source" : [ "obj-21", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-21", 0 ],
+									"source" : [ "obj-42", 0 ]
+								}
+
+							}
+ ]
+					}
+,
+					"patching_rect" : [ 46.5, 340.0, 85.0, 22.0 ],
+					"presentation_rect" : [ 46.5, 340.0, 85.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"description" : "",
+						"digest" : "",
+						"globalpatchername" : "",
+						"style" : "",
+						"tags" : ""
+					}
+,
+					"style" : "",
+					"text" : "p getTestPage"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
+					"bgcolor2" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
+					"bgfillcolor_angle" : 270.0,
+					"bgfillcolor_autogradient" : 0.0,
+					"bgfillcolor_color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+					"bgfillcolor_color1" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
+					"bgfillcolor_color2" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
+					"bgfillcolor_proportion" : 0.39,
+					"bgfillcolor_type" : "gradient",
+					"gradient" : 1,
+					"id" : "obj-15",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 46.5, 306.0, 111.0, 22.0 ],
+					"presentation_rect" : [ 46.5, 306.0, 111.0, 22.0 ],
+					"style" : "",
+					"text" : "Open the test page",
+					"textcolor" : [ 0.52549, 0.062745, 0.003922, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-12",
 					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 34.25, 66.5, 317.5, 60.0 ],
+					"presentation_linecount" : 4,
 					"presentation_rect" : [ 34.25, 66.5, 317.5, 60.0 ],
 					"style" : "",
 					"text" : "This example communicates with a browser using websockets. The browser code is found in the public/js folder (called mySockets.js), and the server code is found in the max_sockets.js Javascript file."
@@ -1201,8 +1349,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 188.25, 307.5, 20.0, 20.0 ],
-					"presentation_rect" : [ 188.25, 307.5, 20.0, 20.0 ],
+					"patching_rect" : [ 304.0, 290.5, 20.0, 20.0 ],
+					"presentation_rect" : [ 304.0, 290.5, 20.0, 20.0 ],
 					"rounded" : 60.0,
 					"style" : "",
 					"text" : "4",
@@ -1213,17 +1361,14 @@
 , 			{
 				"box" : 				{
 					"bubble" : 1,
-					"bubbleside" : 2,
 					"id" : "obj-14",
-					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 46.75, 321.5, 151.0, 52.0 ],
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 46.75, 321.5, 151.0, 52.0 ],
+					"patching_rect" : [ 172.0, 298.5, 138.0, 24.0 ],
+					"presentation_rect" : [ 172.0, 298.5, 138.0, 24.0 ],
 					"style" : "",
-					"text" : "Launch your web browser and point it to..."
+					"text" : "Launch the test page"
 				}
 
 			}
@@ -1359,10 +1504,11 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 34.25, 375.5, 175.0, 33.0 ],
-					"presentation_rect" : [ 34.25, 375.5, 175.0, 33.0 ],
+					"patching_rect" : [ 46.5, 380.5, 231.0, 33.0 ],
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 46.5, 380.5, 231.0, 33.0 ],
 					"style" : "",
-					"text" : "localhost:8080"
+					"text" : "site: localhost:8080"
 				}
 
 			}
@@ -1657,6 +1803,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-33", 0 ],
 					"source" : [ "obj-1", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-15", 0 ]
 				}
 
 			}
