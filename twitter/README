@@ -1,0 +1,18 @@
+Post a Tweet from your patch. This is, I guess, good?
+
+Should be pretty straightforward, given the layout of the patch. Just start the script, then connect, and then you should be able to get your timeline and post status messages as well.
+
+Only caveat is, you need to go through the process of signing up for the Twitter developer program and creating an App.
+
+That will let you create a file called "credentials.json" in the twitter-node folder, which is essential for making this whole stupid thing work.
+
+An example for the credentials.json format would be:
+
+{
+	"credentials": {
+		"consumer_key": "xxxxxxx",
+		"consumer_secret": "xxxxxxxxxxx",
+		"access_token_key": "xxxxxx-xxxxxxx",
+		"access_token_secret": "xxxxxxxxxxx"
+	}
+}

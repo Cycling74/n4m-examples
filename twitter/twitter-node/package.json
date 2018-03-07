@@ -1,0 +1,14 @@
+{
+  "name": "twitter-node",
+  "version": "1.0.0",
+  "description": "Connect to twitter from your Max patcher, using OAuth and Node",
+  "main": "twitter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Florian Demmer, Sam Tarakajian",
+  "license": "ISC",
+  "dependencies": {
+    "twitter": "^1.7.1"
+  }
+}
