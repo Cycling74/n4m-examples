@@ -1,4 +1,4 @@
-// Simple wrapper for the giphy API, which lets you download giphy gifs to Max
+// Simple wrapper for the freesound API, which lets you download freesound sounds to Max
 
 // Begin loading modules
 
