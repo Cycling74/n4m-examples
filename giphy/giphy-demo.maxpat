@@ -9,9 +9,9 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 117.0, 88.0, 849.0, 595.0 ],
-		"bglocked" : 0,
-		"openinpresentation" : 0,
+		"rect" : [ 300.0, 80.0, 1320.0, 966.0 ],
+		"bglocked" : 1,
+		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
@@ -38,13 +38,105 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontsize" : 32.0,
+					"id" : "obj-19",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 719.0, 91.0, 371.0, 42.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 381.5, 66.0, 187.0, 42.0 ],
+					"style" : "",
+					"text" : "See what's"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 32.0,
+					"id" : "obj-13",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 719.0, 148.0, 371.0, 42.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 753.5, 73.0, 216.0, 42.0 ],
+					"style" : "",
+					"text" : "and trending!"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"handoff" : "",
+					"hltcolor" : [ 1.0, 1.0, 1.0, 0.501961 ],
+					"id" : "obj-11",
+					"maxclass" : "ubutton",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "bang", "bang", "", "int" ],
+					"patching_rect" : [ 562.0, 98.0, 128.0, 128.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 596.5, 23.0, 128.0, 128.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"autofit" : 1,
+					"id" : "obj-10",
+					"maxclass" : "fpic",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "jit_matrix" ],
+					"patching_rect" : [ 562.0, 98.0, 128.0, 128.0 ],
+					"pic" : "Macintosh HD:/Users/starakaj/git/n4m-examples/giphy/new.png",
+					"presentation" : 1,
+					"presentation_rect" : [ 596.5, 23.0, 128.0, 128.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-46",
+					"linecount" : 2,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1108.0, 183.0, 223.0, 35.0 ],
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 1108.0, 183.0, 223.0, 35.0 ],
+					"style" : "",
+					"text" : "window size 300 80 1620 1046, window exec"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-42",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 1108.0, 231.0, 100.0, 22.0 ],
+					"presentation_rect" : [ 1108.0, 231.0, 100.0, 22.0 ],
+					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
+					"style" : "",
+					"text" : "thispatcher"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-54",
 					"maxclass" : "jit.pwindow",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 58.0, 311.0, 284.0, 214.5 ],
-					"presentation_rect" : [ 58.0, 311.0, 284.0, 214.5 ]
+					"patching_rect" : [ 58.0, 311.0, 585.0, 441.839783 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 319.263397, 224.770233, 682.473206, 515.459534 ]
 				}
 
 			}
@@ -106,14 +198,25 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgcolor2" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgfillcolor_angle" : 270.0,
+					"bgfillcolor_autogradient" : 0.0,
+					"bgfillcolor_color" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
+					"bgfillcolor_color1" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"bgfillcolor_color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+					"bgfillcolor_proportion" : 0.39,
+					"bgfillcolor_type" : "color",
+					"gradient" : 1,
 					"id" : "obj-8",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 255.0, 28.0, 52.0, 22.0 ],
-					"presentation_rect" : [ 255.0, 28.0, 52.0, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 255.0, 28.0, 124.0, 44.0 ],
+					"presentation_linecount" : 3,
+					"presentation_rect" : [ 255.0, 28.0, 124.0, 44.0 ],
+					"style" : "light",
 					"text" : "trending"
 				}
 
@@ -126,9 +229,50 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 144.0, 28.0, 98.0, 22.0 ],
-					"presentation_rect" : [ 144.0, 28.0, 98.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 421.0, 873.0, 98.0, 22.0 ],
 					"style" : "",
 					"text" : "script npm install"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 58.0, 28.0, 64.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 335.0, 873.0, 64.0, 22.0 ],
+					"style" : "",
+					"text" : "script start"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 58.0, 91.0, 432.0, 44.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 543.0, 855.0, 432.0, 44.0 ],
+					"saved_object_attributes" : 					{
+						"autostart" : 0,
+						"defer" : 0,
+						"node" : "",
+						"npm" : "",
+						"running" : 1,
+						"watch" : 1
+					}
+,
+					"style" : "light",
+					"text" : "node.script giphy.js @watch 1"
 				}
 
 			}
@@ -146,46 +290,104 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 382.0, 311.0, 400.0, 220.0 ],
-					"presentation_rect" : [ 382.0, 311.0, 400.0, 220.0 ],
+					"patching_rect" : [ 771.0, 334.0, 400.0, 220.0 ],
+					"presentation_rect" : [ 771.0, 334.0, 400.0, 220.0 ],
 					"viewvisibility" : 1
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 58.0, 28.0, 64.0, 22.0 ],
-					"presentation_rect" : [ 58.0, 28.0, 64.0, 22.0 ],
+					"angle" : 270.0,
+					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"id" : "obj-18",
+					"maxclass" : "panel",
+					"mode" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 278.0, 776.0, 128.0, 128.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 297.5, 204.770233, 128.0, 128.0 ],
+					"proportion" : 0.39,
+					"shape" : 2,
 					"style" : "",
-					"text" : "script start"
+					"vertical_direction" : 2
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "newobj",
+					"angle" : 270.0,
+					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"horizontal_direction" : 1,
+					"id" : "obj-17",
+					"maxclass" : "panel",
+					"mode" : 0,
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 58.0, 91.0, 167.0, 22.0 ],
-					"presentation_rect" : [ 58.0, 91.0, 167.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"autostart" : 0,
-						"defer" : 0,
-						"node" : "",
-						"npm" : "",
-						"running" : 0,
-						"watch" : 1
-					}
-,
+					"numoutlets" : 0,
+					"patching_rect" : [ 730.0, 782.0, 128.0, 128.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 895.0, 204.770233, 128.0, 128.0 ],
+					"proportion" : 0.39,
+					"shape" : 2,
 					"style" : "",
-					"text" : "node.script giphy.js @watch 1"
+					"vertical_direction" : 2
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"angle" : 270.0,
+					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"horizontal_direction" : 1,
+					"id" : "obj-16",
+					"maxclass" : "panel",
+					"mode" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 578.0, 782.0, 128.0, 128.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 895.0, 630.770264, 128.0, 128.0 ],
+					"proportion" : 0.39,
+					"shape" : 2,
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"angle" : 270.0,
+					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+					"id" : "obj-15",
+					"maxclass" : "panel",
+					"mode" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 433.0, 782.0, 128.0, 128.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 303.0, 630.770264, 128.0, 128.0 ],
+					"proportion" : 0.39,
+					"shape" : 2,
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"angle" : 270.0,
+					"background" : 1,
+					"grad1" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"grad2" : [ 0.844872, 0.474605, 0.389189, 1.0 ],
+					"id" : "obj-14",
+					"maxclass" : "panel",
+					"mode" : 1,
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ -586.0, 5.0, 1321.0, 965.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 0.0, 0.0, 1321.0, 965.0 ],
+					"proportion" : 0.39,
+					"style" : ""
 				}
 
 			}
@@ -199,8 +401,17 @@
 			}
 , 			{
 				"patchline" : 				{
+					"color" : [ 0.65, 0.65, 0.65, 0.9 ],
 					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-1", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"color" : [ 0.65, 0.65, 0.65, 0.9 ],
+					"destination" : [ "obj-8", 0 ],
+					"source" : [ "obj-11", 0 ]
 				}
 
 			}
@@ -242,6 +453,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-42", 0 ],
+					"source" : [ "obj-46", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-6", 0 ]
 				}
@@ -255,6 +473,13 @@
 
 			}
  ],
+		"parameters" : 		{
+			"parameterbanks" : 			{
+
+			}
+
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "n4m.monitor.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/Node For Max/patchers/debug-monitor",
@@ -262,8 +487,36 @@
 				"type" : "JSON",
 				"implicit" : 1
 			}
+, 			{
+				"name" : "new.png",
+				"bootpath" : "~/git/n4m-examples/giphy",
+				"patcherrelativepath" : ".",
+				"type" : "PNG ",
+				"implicit" : 1
+			}
  ],
-		"autosave" : 0
+		"autosave" : 0,
+		"styles" : [ 			{
+				"name" : "light",
+				"default" : 				{
+					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"bgfillcolor" : 					{
+						"type" : "color",
+						"color1" : [ 1.0, 1.0, 1.0, 1.0 ],
+						"color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+						"color" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
+						"angle" : 270.0,
+						"proportion" : 0.39,
+						"autogradient" : 0.0
+					}
+,
+					"fontsize" : [ 32.0 ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+ ]
 	}
 
 }
