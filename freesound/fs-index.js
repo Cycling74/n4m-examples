@@ -46,10 +46,11 @@ Max.addHandlers({
             const idx = Math.floor(Math.random() * count);
             const result = results[idx];
             const sndurl = result.previews["preview-hq-mp3"];
+            Max.outlet(["url", result.url]);
             saveToTemporaryFile(sndurl, ".mp3", path => {
                 Max.outlet([query, path]);
             }, err => {
-                Max.post(err, "ERROR");
+                Max.post(err, Max.POST_LEVELS.WARN);
             });
         }, (err) => {
             Max.post(err);
@@ -58,20 +59,28 @@ Max.addHandlers({
 });
 
 function saveToTemporaryFile(url, extension, onSuccess, onErr) {
-    tmp.file({postfix: `-${extension}`}, (err, path, fd, cleanup) => {
-        if (err) {
-            onErr(err);
-            return;
-        }
-        const writeStream = fs.createWriteStream(path);
-        const readRequest = http.request(url, (res) => {
-            res.on("data", data => writeStream.write(data));
-            res.on("end", () => {
-                writeStream.close();
-                onSuccess(path);
-            });
-            res.on("error", err => { onErr(err) });
+
+    let audio = new Buffer("");
+    const readRequest = http.request(url, res => {
+        res.on("data", data => {
+            audio = Buffer.concat([audio, data]);
         });
-        readRequest.end();
+        res.on("end", () => {
+            tmp.tmpName({postfix: extension}, function _tmpNameGenerated(err, path) {
+                if (err) {
+                    onErr(err);
+                } else {
+                    fs.writeFile(path, audio, { encoding: "utf8", flag: "w" }, err => {
+                        if (err) {
+                            onErr(err)
+                        } else {
+                            onSuccess(path);
+                        }
+                    });
+                }
+            });
+        });
     });
+
+    readRequest.end();
 }
