@@ -49,7 +49,7 @@ const handlers = {
 		if (status) {
 			client.post('statuses/update', params, function(error, tweet, response) {
 				if (!error) {
-					Max.outlet(tweet);
+					Max.outlet("success");
 				} else {
 					Max.post(error, "ERROR");
 				}
