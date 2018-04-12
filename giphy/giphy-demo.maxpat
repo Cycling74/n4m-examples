@@ -45,7 +45,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 719.0, 91.0, 371.0, 42.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 381.5, 66.0, 187.0, 42.0 ],
+					"presentation_rect" : [ 383.5, 66.0, 187.0, 42.0 ],
 					"style" : "",
 					"text" : "See what's"
 				}
@@ -60,7 +60,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 719.0, 148.0, 371.0, 42.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 753.5, 73.0, 216.0, 42.0 ],
+					"presentation_rect" : [ 767.0, 66.0, 216.0, 42.0 ],
 					"style" : "",
 					"text" : "and trending!"
 				}
@@ -214,7 +214,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 255.0, 28.0, 124.0, 44.0 ],
-					"presentation_linecount" : 3,
 					"presentation_rect" : [ 255.0, 28.0, 124.0, 44.0 ],
 					"style" : "light",
 					"text" : "trending"
@@ -473,13 +472,6 @@
 
 			}
  ],
-		"parameters" : 		{
-			"parameterbanks" : 			{
-
-			}
-
-		}
-,
 		"dependency_cache" : [ 			{
 				"name" : "n4m.monitor.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/Node For Max/patchers/debug-monitor",
