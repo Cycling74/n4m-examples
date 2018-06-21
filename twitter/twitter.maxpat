@@ -10,7 +10,7 @@
 		}
 ,
 		"rect" : [ 300.0, 80.0, 1320.0, 966.0 ],
-		"bglocked" : 1,
+		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
@@ -44,7 +44,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 1046.0, 133.0, 24.0, 24.0 ],
-					"presentation" : 1,
 					"presentation_rect" : [ 1046.0, 133.0, 24.0, 24.0 ],
 					"style" : ""
 				}
@@ -159,7 +158,6 @@
 					"presentation_rect" : [ 439.0, 283.0, 279.0, 42.0 ],
 					"style" : "",
 					"tabmode" : 0,
-					"text" : "Bang means do it",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -173,8 +171,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1079.0, 257.0, 71.0, 29.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 1028.0, 163.0, 71.0, 29.0 ],
+					"presentation_rect" : [ 1079.0, 257.0, 71.0, 29.0 ],
 					"style" : "",
 					"text" : "No idea"
 				}
@@ -189,9 +186,9 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 1079.0, 298.0, 138.0, 29.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1114.0, 163.0, 44.0, 29.0 ],
+					"presentation_rect" : [ 1067.0, 163.0, 132.0, 29.0 ],
 					"style" : "",
-					"text" : "print"
+					"text" : "print @popup 1"
 				}
 
 			}
@@ -669,16 +666,15 @@
 				"box" : 				{
 					"angle" : 270.0,
 					"background" : 1,
-					"grad1" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"grad2" : [ 0.676649, 0.885473, 0.969255, 1.0 ],
+					"bgcolor" : [ 0.521124, 0.8924, 0.926443, 1.0 ],
 					"id" : "obj-34",
 					"maxclass" : "panel",
-					"mode" : 1,
+					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 1021.0, 963.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 1322.0, 972.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 1322.0, 994.0 ],
 					"proportion" : 0.39,
 					"style" : ""
 				}

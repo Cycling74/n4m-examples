@@ -10,7 +10,7 @@
 		}
 ,
 		"rect" : [ 300.0, 80.0, 1320.0, 966.0 ],
-		"bglocked" : 1,
+		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
@@ -38,12 +38,28 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"autofit" : 1,
+					"forceaspect" : 1,
+					"id" : "obj-44",
+					"maxclass" : "fpic",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "jit_matrix" ],
+					"patching_rect" : [ 779.0, 180.03125, 195.522385, 40.937499 ],
+					"pic" : "/Users/starakaj/git/n4m-examples/giphy/powered_by_giphy.gif",
+					"presentation" : 1,
+					"presentation_rect" : [ 767.0, 118.0, 195.522385, 40.937499 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontsize" : 32.0,
 					"id" : "obj-19",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 719.0, 91.0, 371.0, 42.0 ],
+					"patching_rect" : [ 779.0, 51.0, 371.0, 42.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 383.5, 66.0, 187.0, 42.0 ],
 					"style" : "",
@@ -58,7 +74,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 719.0, 148.0, 371.0, 42.0 ],
+					"patching_rect" : [ 779.0, 108.0, 371.0, 42.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 767.0, 66.0, 216.0, 42.0 ],
 					"style" : "",
@@ -375,11 +391,10 @@
 				"box" : 				{
 					"angle" : 270.0,
 					"background" : 1,
-					"grad1" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"grad2" : [ 0.844872, 0.474605, 0.389189, 1.0 ],
+					"bgcolor" : [ 1.0, 0.394308, 0.375508, 1.0 ],
 					"id" : "obj-14",
 					"maxclass" : "panel",
-					"mode" : 1,
+					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ -586.0, 5.0, 1321.0, 965.0 ],
@@ -486,11 +501,19 @@
 				"type" : "PNG ",
 				"implicit" : 1
 			}
+, 			{
+				"name" : "powered_by_giphy.gif",
+				"bootpath" : "~/git/n4m-examples/giphy",
+				"patcherrelativepath" : ".",
+				"type" : "GIFf",
+				"implicit" : 1
+			}
  ],
 		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "light",
 				"default" : 				{
+					"fontsize" : [ 32.0 ],
 					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "color",
@@ -501,8 +524,7 @@
 						"proportion" : 0.39,
 						"autogradient" : 0.0
 					}
-,
-					"fontsize" : [ 32.0 ]
+
 				}
 ,
 				"parentstyle" : "",

@@ -1,0 +1,32 @@
+{
+  "name": "n4m-examples",
+  "version": "1.0.0",
+  "description": "Example patchers and node scripts for the Node for Max package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cycling74/n4m-examples.git"
+  },
+  "keywords": [
+    "max",
+    "node",
+    "n4m",
+    "max8"
+  ],
+  "author": {
+    "name": "Cycling '74",
+    "url": "https://cycling74.com"
+  },
+  "contributors": [
+    "Florian Demmer <florian@cycling74.com>",
+    "Sam Tarakajian <sam@cycling74.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cycling74/n4m-examples/issues"
+  },
+  "homepage": "https://github.com/Cycling74/n4m-examples#readme"
+}
