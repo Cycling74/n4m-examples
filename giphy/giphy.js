@@ -18,13 +18,13 @@ try {
 	dotenv_module = require("dotenv");
 	dotenv_module.config();
 } catch (e) {
-	maxAPI.post(e, "ERROR");
-	maxAPI.post("Could not load the dotenv module. Please be sure to send the message 'script npm install' to the node.script object to download node modules", "ERROR");
+	maxAPI.post(e, maxAPI.POST_LEVELS.ERROR);
+	maxAPI.post("Could not load the dotenv module. Please be sure to send the message 'script npm install' to the node.script object to download node modules", maxAPI.POST_LEVELS.ERROR);
 	process.exit(1);
 }
 
 if (!process.env.GIPHY_API_KEY) {
-	maxAPI.post("No value for key GIPHY_API_KEY in .env file. Please make sure to create a file called .env with a GIPHY API key.", "ERROR");
+	maxAPI.post("No value for key GIPHY_API_KEY in .env file. Please make sure to create a file called .env with a GIPHY API key.", maxAPI.POST_LEVELS.ERROR);
 	process.exit(1);
 }
 
