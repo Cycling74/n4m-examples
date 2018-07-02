@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------
-// giphy.js - Download Giphy gifs to Max
+// giphy.js - Download Giphy gifs to maxAPI
 //
 // Check the README for information on how to get a Giphy API key,
 // which you'll need in order to get any of this to work.
@@ -11,20 +11,20 @@
 
 // Begin loading modules
 
-const Max = require("max-api");
+const maxAPI = require("maxAPI-api");
 
 let dotenv_module;
 try {
 	dotenv_module = require("dotenv");
 	dotenv_module.config();
 } catch (e) {
-	Max.post(e, "ERROR");
-	Max.post("Could not load the dotenv module. Please be sure to send the message 'script npm install' to the node.script object to download node modules", "ERROR");
+	maxAPI.post(e, "ERROR");
+	maxAPI.post("Could not load the dotenv module. Please be sure to send the message 'script npm install' to the node.script object to download node modules", "ERROR");
 	process.exit(1);
 }
 
 if (!process.env.GIPHY_API_KEY) {
-	Max.post("No value for key GIPHY_API_KEY in .env file. Please make sure to create a file called .env with a GIPHY API key.", "ERROR");
+	maxAPI.post("No value for key GIPHY_API_KEY in .env file. Please make sure to create a file called .env with a GIPHY API key.", "ERROR");
 	process.exit(1);
 }
 
@@ -36,12 +36,12 @@ function trimPreview(previewFilename) {
 
 // Declare handlers
 
-Max.addHandlers({
+maxAPI.addHandlers({
 	random: (tag) => {
 		giphy.random(tag).then((res) => {
-			const preview_file = Max.outlet(res.data.images.preview.mp4);
+			const preview_file = maxAPI.outlet(res.data.images.preview.mp4);
 			const filename = trimPreview(preview_file);
-			Max.outlet(["url", filename]);
+			maxAPI.outlet(["url", filename]);
 		});
 	},
 
@@ -54,7 +54,7 @@ Max.addHandlers({
 			const idx = Math.floor(Math.random() * 25);
 			const preview_file = res.data[idx].images.preview.mp4;
 			const filename = trimPreview(preview_file);
-			Max.outlet(["url", filename]);
+			maxAPI.outlet(["url", filename]);
 		});
 	}
 });
