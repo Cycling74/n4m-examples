@@ -88,7 +88,7 @@ maxAPI.addHandlers({
 			// const count = results.length;
 
 			// Output the results as a list
-			maxAPI.outlet(["search", results]);
+			maxAPI.outlet(["search", query, results]);
 
 			// const idx = Math.floor(Math.random() * count);
 			// const result = results[idx];
@@ -103,8 +103,8 @@ maxAPI.addHandlers({
 			maxAPI.post(err);
 		});
 	},
-	preview: (url) => {
-		maxAPI.outlet("preview", "start", url);
+	preview: (key, url) => {
+		maxAPI.outlet("preview", key, "start", url);
 		tmp.tmpName({
 			postfix: ".mp3"
 		}, (err, dlpath) => {
@@ -112,17 +112,17 @@ maxAPI.addHandlers({
 				maxAPI.post(err, maxAPI.POST_LEVELS.WARN);
 			}
 			saveToFile(url, dlpath, () => {
-				maxAPI.outlet("preview", "complete", url, dlpath);
+				maxAPI.outlet("preview", key, "complete", url, dlpath);
 			}, dlerr => {
 				maxAPI.post(dlerr, maxAPI.POST_LEVELS.WARN);
 			});
 		});
 	},
-	download: (name, url, dlpath) => {
-		maxAPI.outlet("download", "start", url, dlpath);
+	download: (key, name, url, dlpath) => {
+		maxAPI.outlet("download", key, "start", url, dlpath);
 		const outpath = path.join(dlpath, `${name}.mp3`);
 		saveToFile(url, outpath, () => {
-			maxAPI.outlet("download", "complete", url, outpath);
+			maxAPI.outlet("download", key, "complete", url, outpath);
 		}, dlerr => {
 			maxAPI.post(dlerr, maxAPI.POST_LEVELS.WARN);
 		});
