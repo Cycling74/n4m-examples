@@ -1,7 +1,7 @@
 // ---------------------------------------------------------------------
 // fs-index.js - Search and download from Freesound.org
 //
-// Check the README for information on how to get a Twitter API key,
+// Check the README for information on how to get a Freesound API key,
 // which you'll need in order to get any of this to work.
 //
 // This script uses a fork of the freesound NPM package, availiable here:

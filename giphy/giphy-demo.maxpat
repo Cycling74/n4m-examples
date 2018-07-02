@@ -9,7 +9,9 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 300.0, 80.0, 1320.0, 966.0 ],
+		"rect" : [ 132.0, 80.0, 1320.0, 966.0 ],
+		"bgcolor" : [ 0.898039, 0.898039, 0.898039, 1 ],
+		"editing_bgcolor" : [ 0.898039, 0.898039, 0.898039, 1 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -38,6 +40,58 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"bubble" : 1,
+					"bubbleside" : 0,
+					"id" : "obj-2",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 607.5, 161.0, 150.0, 52.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 611.0, 158.0, 99.0, 52.0 ],
+					"style" : "",
+					"text" : "2. Press to see what's new."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"bubbleside" : 2,
+					"id" : "obj-7",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 381.5, 812.0, 150.0, 39.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 400.5, 825.0, 99.0, 39.0 ],
+					"style" : "",
+					"text" : "1. start the script"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"bubbleside" : 2,
+					"id" : "obj-5",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 463.0, 797.0, 150.0, 52.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 228.5, 812.0, 139.0, 52.0 ],
+					"style" : "",
+					"text" : "0. Install dependencies (one time)"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"autofit" : 1,
 					"forceaspect" : 1,
 					"id" : "obj-44",
@@ -45,10 +99,10 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
-					"patching_rect" : [ 779.0, 180.03125, 195.522385, 40.937499 ],
+					"patching_rect" : [ 779.0, 180.03125, 195.522385000000014, 40.937499359375003 ],
 					"pic" : "/Users/starakaj/git/n4m-examples/giphy/powered_by_giphy.gif",
 					"presentation" : 1,
-					"presentation_rect" : [ 767.0, 118.0, 195.522385, 40.937499 ]
+					"presentation_rect" : [ 767.0, 118.0, 195.522384643554688, 40.937499284744263 ]
 				}
 
 			}
@@ -91,6 +145,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "bang", "bang", "", "int" ],
+					"parameter_enable" : 0,
 					"patching_rect" : [ 562.0, 98.0, 128.0, 128.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 596.5, 23.0, 128.0, 128.0 ]
@@ -150,9 +205,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 58.0, 311.0, 585.0, 441.839783 ],
+					"patching_rect" : [ 58.0, 311.0, 585.0, 441.839783000000011 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 319.263397, 224.770233, 682.473206, 515.459534 ]
+					"presentation_rect" : [ 319.263397216796875, 224.770233154296875, 682.47320556640625, 515.45953369140625 ]
 				}
 
 			}
@@ -245,7 +300,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 144.0, 28.0, 98.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 421.0, 873.0, 98.0, 22.0 ],
+					"presentation_rect" : [ 249.0, 873.0, 98.0, 22.0 ],
 					"style" : "",
 					"text" : "script npm install"
 				}
@@ -260,7 +315,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 58.0, 28.0, 64.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 335.0, 873.0, 64.0, 22.0 ],
+					"presentation_rect" : [ 418.0, 877.0, 64.0, 22.0 ],
 					"style" : "",
 					"text" : "script start"
 				}
@@ -322,7 +377,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 278.0, 776.0, 128.0, 128.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 297.5, 204.770233, 128.0, 128.0 ],
+					"presentation_rect" : [ 297.5, 204.770233154296875, 128.0, 128.0 ],
 					"proportion" : 0.39,
 					"shape" : 2,
 					"style" : "",
@@ -342,7 +397,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 730.0, 782.0, 128.0, 128.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 895.0, 204.770233, 128.0, 128.0 ],
+					"presentation_rect" : [ 895.0, 204.770233154296875, 128.0, 128.0 ],
 					"proportion" : 0.39,
 					"shape" : 2,
 					"style" : "",
@@ -362,7 +417,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 578.0, 782.0, 128.0, 128.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 895.0, 630.770264, 128.0, 128.0 ],
+					"presentation_rect" : [ 895.0, 630.770263671875, 128.0, 128.0 ],
 					"proportion" : 0.39,
 					"shape" : 2,
 					"style" : ""
@@ -380,7 +435,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 433.0, 782.0, 128.0, 128.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 303.0, 630.770264, 128.0, 128.0 ],
+					"presentation_rect" : [ 303.0, 630.770263671875, 128.0, 128.0 ],
 					"proportion" : 0.39,
 					"shape" : 2,
 					"style" : ""
@@ -495,10 +550,17 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "resize_n4m_monitor_patcher.js",
+				"bootpath" : "~/Documents/Max 8/Packages/Node For Max/patchers/debug-monitor",
+				"patcherrelativepath" : "../../../Documents/Max 8/Packages/Node For Max/patchers/debug-monitor",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "new.png",
 				"bootpath" : "~/git/n4m-examples/giphy",
 				"patcherrelativepath" : ".",
-				"type" : "PNG ",
+				"type" : "PNG",
 				"implicit" : 1
 			}
 , 			{
@@ -513,7 +575,6 @@
 		"styles" : [ 			{
 				"name" : "light",
 				"default" : 				{
-					"fontsize" : [ 32.0 ],
 					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "color",
@@ -524,7 +585,8 @@
 						"proportion" : 0.39,
 						"autogradient" : 0.0
 					}
-
+,
+					"fontsize" : [ 32.0 ]
 				}
 ,
 				"parentstyle" : "",
