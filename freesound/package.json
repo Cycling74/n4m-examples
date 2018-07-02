@@ -1,0 +1,31 @@
+{
+  "name": "n4m-freesound",
+  "version": "1.0.0",
+  "description": "Examples using the freesound API with Node for Max",
+  "main": "fs-index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cycling74/n4m-examples.git"
+  },
+  "keywords": [
+    "n4m",
+    "Node",
+    "for",
+    "Max",
+    "freesound"
+  ],
+  "author": "Cycling '74",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cycling74/n4m-examples/issues"
+  },
+  "homepage": "https://github.com/Cycling74/n4m-examples#readme",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "freesound": "git+https://git@github.com/Girlfriends/freesound.js.git",
+    "tmp": "0.0.33"
+  }
+}
