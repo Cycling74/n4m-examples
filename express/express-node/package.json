@@ -1,0 +1,18 @@
+{
+  "name": "express-node",
+  "version": "1.0.0",
+  "description": "Run an express server from Max",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "server",
+    "express"
+  ],
+  "author": "Sam Tarakajian, Florian Demmer",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
