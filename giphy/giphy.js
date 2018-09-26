@@ -11,7 +11,7 @@
 
 // Begin loading modules
 
-const maxAPI = require("maxAPI-api");
+const maxAPI = require("max-api");
 
 let dotenv_module;
 try {
