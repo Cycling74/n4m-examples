@@ -4,7 +4,7 @@ Hey Maxers! This repository contains many examples of how to use the Node For Ma
 
 You might find an error in an example, or have a request for a example you would like to see. You can report this by [submitting an issue](https://github.com/Cycling74/n4m-examples/issues/new) to this repository. Note that you will need to have a GitHub account to submit an issue.
 
-## List of Examples:
+## List of Examples
 
 * [cors-service](https://github.com/Cycling74/n4m-examples/tree/master/cors-service): Create a CORS (Cross-Origin Resource Sharing) capable web server. By [Cycling '74](https://github.com/Cycling74).
 * [echo](https://github.com/Cycling74/n4m-examples/tree/master/echo): Simply outputs the input, a pass-through. Shows how to use a list of arguments of unspecified length. By [Cycling '74](https://github.com/Cycling74).
