@@ -1,6 +1,8 @@
 # Node For Max Examples
 
-Hey Maxers! This repository contains many examples of how to use the Node For Max package in your Max patches. Some were created by Cycling '74, but others are from the Max community! We welcome community contributions and have included a guide on [how to add your own example](#adding-your-own-example).
+Hey Maxers! This repository contains many examples of how to use the Node For Max package in your Max patches. Some were created by Cycling '74, but others are from the Max community! We welcome community contributions and have included a guide on [how to add your own example](#adding-your-own-example). 
+
+You might find an error in an example, or have a request for a example you would like to see. You can report this by [submitting an issue](https://github.com/Cycling74/n4m-examples/issues/new) to this repository. Note that you will need to have a GitHub account to submit an issue.
 
 ## List of Examples:
 
