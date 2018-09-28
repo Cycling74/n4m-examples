@@ -7,5 +7,5 @@ maxAPI.addHandler("text", (...args) => {
 
     // 
     // The outlet function sends the arguments right back to Max. Hence, echo.
-    maxAPI.outlet(args);
+    maxAPI.outlet(...args);
 });
