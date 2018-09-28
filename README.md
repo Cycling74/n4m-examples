@@ -1,5 +1,6 @@
-# n4m-examples
-Repository of examples for the usage of the Node For Max package.
+# Node For Max Examples
+
+Hey Maxers! This repository contains many examples of how to use the Node For Max package in your Max patches. Some were created by Cycling '74, but others are from the Max community! We welcome community contributions and have included a guide on [how to add your own example](#adding-your-own-example).
 
 ## List of Examples:
 
@@ -24,7 +25,7 @@ If you've made something cool with Node For Max, we'd love to showcase it here! 
   1. Create a folder in this repository that's the name of your example, i.e. `my-fun-example`.
   2. Copy all of the necessary files to run your example to the folder. This should be at least a max patch and a JS file.
   3. Create a file in your example folder called `README.md` (the file path would be `my-fun-example/README.md`) with a description of your example and how to fun it. You can look at the [file-upload README](https://github.com/Cycling74/n4m-examples/blob/master/file-upload/README.md) for reference.
-  4. Add a link to your example in this file, under ["List of Examples"](https://github.com/Cycling74/n4m-examples#list-of-examples). Be sure to credit yourself!
+  4. Add a link to your example in this file, under ["List of Examples"](#list-of-examples). Be sure to credit yourself!
   5. Make sure you don't accidentally add any sensitive information to your example! This happens a lot when working with APIs, since you'll need to create and use API keys. We recommend looking at the [freesound](https://github.com/Cycling74/n4m-examples/tree/master/freesound) example for reference about how to prevent this. You'll likely end up adding two files: `.gitignore` and `.env-template`.
 5. Save and commit your changes. Push them to the fork of the N4M examples you made on GitHub.
 6. [Make a pull request](https://guides.github.com/activities/forking/#making-a-pull-request). You can think of this as the actual "submission" step. 
