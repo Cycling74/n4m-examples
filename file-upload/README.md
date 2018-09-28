@@ -10,7 +10,7 @@ Note: Before you run this example, make sure that you run the npm install embedd
 
 `file-upload.maxpat` : The Max patch to run the example.<br />
 `file-upload.js` : The launcher JS for the NodeJS script.<br />
-`app.js` : The NodeJS/Express script that runs the application.<br /><br />
+`app.js` : The NodeJS/Express script that runs the application.<br />
 `package.json` : The Node package file.<br />
 `README.md` : This file!<br />
 
