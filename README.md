@@ -15,6 +15,7 @@ You might find an error in an example, or have a request for a example you would
 * [giphy](https://github.com/Cycling74/n4m-examples/tree/master/giphy): Use the Giphy API with Max. By [Cycling '74](https://github.com/Cycling74).
 * [routeServer](https://github.com/Cycling74/n4m-examples/tree/master/routeServer): Another small Express application example, which gets data from Max. By [Cycling '74](https://github.com/Cycling74).
 * [sockets](https://github.com/Cycling74/n4m-examples/tree/master/sockets): An example creating a web server with websockets. By [Cycling '74](https://github.com/Cycling74).
+* [tonal-chord-builder](https://github.com/Cycling74/n4m-examples/tree/master/tonal-chord-builder): Generate different chords based on a root note. By [Cycling '74](https://github.com/Cycling74).
 * [twitter](https://github.com/Cycling74/n4m-examples/tree/master/twitter): Communicate with Twitter from Max. By [Cycling '74](https://github.com/Cycling74).
 
 ## Adding your own Example

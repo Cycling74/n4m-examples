@@ -1,0 +1,15 @@
+{
+  "name": "detect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "chord-detect.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tonal": "^2.0.0",
+    "tonal-detect": "^2.0.0"
+  }
+}
