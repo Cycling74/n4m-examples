@@ -9,9 +9,8 @@
 			"modernui" : 1
 		}
 ,
+		"classnamespace" : "box",
 		"rect" : [ 59.0, 104.0, 787.0, 540.0 ],
-		"bgcolor" : [ 0.898039, 0.898039, 0.898039, 1 ],
-		"editing_bgcolor" : [ 0.898039, 0.898039, 0.898039, 1 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -48,9 +47,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 40.0, 328.0, 139.0, 52.0 ],
-					"presentation_linecount" : 3,
-					"presentation_rect" : [ 40.0, 328.0, 139.0, 52.0 ],
-					"style" : "",
+					"presentation_linecount" : 2,
 					"text" : "Anything you send shoudl be echoed here"
 				}
 
@@ -65,9 +62,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 214.0, 105.5, 111.0, 37.0 ],
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 214.0, 105.5, 111.0, 37.0 ],
-					"style" : "",
-					"text" : "Remember to start the script"
+					"text" : "Write your text here"
 				}
 
 			}
@@ -78,8 +73,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 55.0, 298.0, 120.0, 22.0 ],
-					"presentation_rect" : [ 55.0, 298.0, 120.0, 22.0 ],
-					"style" : "",
 					"text" : "print echo @popup 1"
 				}
 
@@ -94,8 +87,6 @@
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 94.0, 99.0, 100.0, 50.0 ],
-					"presentation_rect" : [ 94.0, 99.0, 100.0, 50.0 ],
-					"style" : "",
 					"text" : "satars"
 				}
 
@@ -115,7 +106,6 @@
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
 					"patching_rect" : [ 316.0, 244.0, 400.0, 220.0 ],
-					"presentation_rect" : [ 316.0, 244.0, 400.0, 220.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -129,8 +119,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 136.0, 40.5, 111.0, 37.0 ],
-					"presentation_rect" : [ 136.0, 40.5, 111.0, 37.0 ],
-					"style" : "",
+					"presentation_linecount" : 2,
 					"text" : "Remember to start the script"
 				}
 
@@ -143,8 +132,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 55.0, 48.0, 64.0, 22.0 ],
-					"presentation_rect" : [ 55.0, 48.0, 64.0, 22.0 ],
-					"style" : "",
 					"text" : "script start"
 				}
 
@@ -157,17 +144,14 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 55.0, 183.0, 109.0, 22.0 ],
-					"presentation_rect" : [ 55.0, 183.0, 109.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
 						"node" : "",
 						"npm" : "",
-						"running" : 1,
 						"watch" : 0
 					}
 ,
-					"style" : "",
 					"text" : "node.script echo.js"
 				}
 
