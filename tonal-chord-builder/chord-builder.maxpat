@@ -4,15 +4,15 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 1,
+			"revision" : 0,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 79.0, 1287.0, 787.0 ],
+		"rect" : [ 491.0, 142.0, 949.0, 659.0 ],
 		"bglocked" : 0,
-		"openinpresentation" : 0,
+		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
@@ -38,6 +38,18 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 43.0, 1278.0, 32.0, 22.0 ],
+					"text" : "/~ 5."
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-83",
 					"maxclass" : "newobj",
@@ -127,18 +139,18 @@
 					"orientation" : 1,
 					"outlettype" : [ "signal", "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 41.0, 1280.0, 136.0, 47.0 ],
+					"patching_rect" : [ 41.0, 1355.0, 136.0, 47.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 40.0, 552.0, 136.0, 47.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_mmax" : 6.0,
-							"parameter_initial" : [ 0.0 ],
-							"parameter_shortname" : "live.gain~",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4,
 							"parameter_mmin" : -70.0,
-							"parameter_longname" : "live.gain~"
+							"parameter_longname" : "live.gain~",
+							"parameter_mmax" : 6.0,
+							"parameter_initial" : [ 0.0 ],
+							"parameter_shortname" : "live.gain~"
 						}
 
 					}
@@ -189,11 +201,11 @@
 					"presentation_rect" : [ 456.75, 154.0, 20.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_mmax" : 1.0,
-							"parameter_shortname" : "live.toggle",
 							"parameter_enum" : [ "off", "on" ],
 							"parameter_type" : 2,
-							"parameter_longname" : "live.toggle[1]"
+							"parameter_longname" : "live.toggle[1]",
+							"parameter_mmax" : 1.0,
+							"parameter_shortname" : "live.toggle"
 						}
 
 					}
@@ -214,7 +226,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 1,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -654,7 +666,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 40.0, 60.0, 668.0, 22.0 ],
+					"patching_rect" : [ 54.0, 60.0, 668.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 40.0, 60.0, 668.0, 22.0 ],
 					"text" : "Uses the npm library Tonal to generate different chords based on a root note."
@@ -669,7 +681,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 40.0, 11.0, 357.0, 47.0 ],
+					"patching_rect" : [ 54.0, 11.0, 357.0, 47.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 40.0, 11.0, 357.0, 47.0 ],
 					"text" : "Tonal Chord Builder"
@@ -682,7 +694,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 41.0, 1349.0, 45.0, 45.0 ],
+					"patching_rect" : [ 41.0, 1424.0, 45.0, 45.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 197.0, 558.5, 45.0, 45.0 ]
 				}
@@ -814,11 +826,11 @@
 					"presentation_rect" : [ 282.0, 209.0, 102.0, 24.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_mmax" : 1.0,
-							"parameter_shortname" : "live.text",
 							"parameter_enum" : [ "val1", "val2" ],
 							"parameter_type" : 2,
-							"parameter_longname" : "live.text"
+							"parameter_longname" : "live.text",
+							"parameter_mmax" : 1.0,
+							"parameter_shortname" : "live.text"
 						}
 
 					}
@@ -874,7 +886,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-8",
-					"items" : [ "IAC Driver Bus 1", ",", "to Max 1", ",", "to Max 2" ],
+					"items" : [ "IAC Driver Bus 1", ",", "Network Looback Session", ",", "to Max 1", ",", "to Max 2" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -967,7 +979,7 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ -14.0, -1.0, 1310.0, 99.0 ],
+					"patching_rect" : [ 0.0, -1.0, 1310.0, 99.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ -14.0, -1.0, 1310.0, 99.0 ],
 					"proportion" : 0.5,
@@ -1070,7 +1082,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-69", 0 ],
+					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-25", 0 ]
 				}
 
@@ -1086,6 +1098,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-63", 0 ],
 					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-69", 0 ],
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
@@ -1257,8 +1276,8 @@
  ],
 		"parameters" : 		{
 			"obj-69" : [ "live.gain~", "live.gain~", 0 ],
-			"obj-49" : [ "live.toggle[1]", "live.toggle", 0 ],
 			"obj-5" : [ "live.text", "live.text", 0 ],
+			"obj-49" : [ "live.toggle[1]", "live.toggle", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -1267,7 +1286,7 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "poly.phatness.maxpat",
-				"bootpath" : "~/Development/freelance/n4m-examples/tonal-chord-builder",
+				"bootpath" : "~/git/n4m-examples/tonal-chord-builder",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -1277,8 +1296,6 @@
 		"styles" : [ 			{
 				"name" : "light",
 				"default" : 				{
-					"fontsize" : [ 32.0 ],
-					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "color",
 						"color1" : [ 1.0, 1.0, 1.0, 1.0 ],
@@ -1288,7 +1305,9 @@
 						"proportion" : 0.39,
 						"autogradient" : 0.0
 					}
-
+,
+					"fontsize" : [ 32.0 ],
+					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
