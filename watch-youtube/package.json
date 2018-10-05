@@ -1,0 +1,14 @@
+{
+  "name": "1-watch-youtube-videos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "watch-youtube.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julian Rubisch",
+  "license": "MIT",
+  "dependencies": {
+    "ytdl-core": "^0.25.2"
+  }
+}
