@@ -115,8 +115,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 402.5, 311.0, 351.0, 114.0 ],
-					"text" : "A little script that allows you to play arbitrary YouTube videos in a [jit.movie].\n\nJust paste any valid youtube URL in the [open] message.\n\nFor details on the script, refer here: https://www.znibbl.es/videos/10-node-in-max-01-watch-youtube-videos"
+					"patching_rect" : [ 402.5, 311.0, 502.0, 114.0 ],
+					"text" : "A little script that allows you to play arbitrary YouTube videos in a [jit.movie].\n\nClick [script npm install], then [script start] below\n\nJust paste any valid youtube URL in the [open] message, and click it.\n\nFor details on the script, refer here: https://www.znibbl.es/videos/10-node-in-max-01-watch-youtube-videos"
 				}
 
 			}

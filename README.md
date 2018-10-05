@@ -17,6 +17,7 @@ You might find an error in an example, or have a request for a example you would
 * [sockets](https://github.com/Cycling74/n4m-examples/tree/master/sockets): An example creating a web server with websockets. By [Cycling '74](https://github.com/Cycling74).
 * [tonal-chord-builder](https://github.com/Cycling74/n4m-examples/tree/master/tonal-chord-builder): Generate different chords based on a root note. By [Cycling '74](https://github.com/Cycling74).
 * [twitter](https://github.com/Cycling74/n4m-examples/tree/master/twitter): Communicate with Twitter from Max. By [Cycling '74](https://github.com/Cycling74).
+* [watch-youtube](https://github.com/Cycling74/n4m-examples/tree/master/watch-youtube): Communicate with Twitter from Max. By Julian from [Znibbles](https://www.znibbl.es).
 
 ## Adding your own Example
 
