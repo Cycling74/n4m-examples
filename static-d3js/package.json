@@ -1,0 +1,15 @@
+{
+  "name": "static-d3js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "static-d3.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julian Rubisch",
+  "license": "MIT",
+  "dependencies": {
+    "d3-node": "^2.1.0",
+    "svg2png": "^4.1.1"
+  }
+}
