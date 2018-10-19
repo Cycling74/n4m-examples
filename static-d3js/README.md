@@ -21,3 +21,4 @@ Note: Before you run this example, make sure that you run the npm install embedd
 2. (First time only...) Click on the [script npm install] message at the lower-right to load the required packages and libraries.
 3. Click on the [script start] message at the top-left to start the Node process running.
 4. Send a `[d3]` message followed by a valid d3js script file. An example based on Mike Bostock's [grouped bar chart](https://bl.ocks.org/mbostock/3887051) is provided.
+5. Click the toggle to start the rendering engine.
