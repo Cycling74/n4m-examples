@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 const Max = require("max-api");
 
@@ -10,14 +10,14 @@ function anypost(str) {
 	}
 }
 
-app.get('/', function (req, res) {
+app.get("/", function (req, res) {
 	let responseText = "";
 	if (Max) {
 		Max.getDict("pagestats")
 			.then((dict) => {
 				dict.accesses = dict.accesses ? dict.accesses + 1 : 1;
 				Max.updateDict("pagestats", "accesses", dict.accesses);
-				responseText += '<p>Hello, Max!</p>';
+				responseText += "<p>Hello, Max!</p>";
 				responseText += `<p>
 					This page has been loaded ${dict.accesses} ${dict.accesses === 1 ? "time" : "times"}.
 				</p>`;
@@ -27,16 +27,16 @@ app.get('/', function (req, res) {
 				res.send(responseText);
 			})
 			.catch((err) => {
-				responseText += '<p>Had trouble connecting to Max</p>';
+				responseText += "<p>Had trouble connecting to Max</p>";
 				responseText += `<p>${err}</p>`;
 				res.send(responseText);
 			});
 	} else {
-		res.send('<p>Hello! This simple server is not running inside of Max.<p>');
+		res.send("<p>Hello! This simple server is not running inside of Max.<p>");
 	}
 });
 
 app.listen(3000, function () {
-	anypost('Example app listening on port 3000!');
+	anypost("Example app listening on port 3000!");
 	if (Max) Max.outlet("ready");
 });

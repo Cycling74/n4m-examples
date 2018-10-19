@@ -8,13 +8,13 @@ const path = require("path");
 const MaxMSP = require("max-api");
 
 MaxMSP.addHandler("cwd", () => {
-  Helpers.doCWD();
-})
+	Helpers.doCWD();
+});
 
 let Helpers = {
-  doCWD: function() {
-    MaxMSP.outlet(["cwd", process.cwd()]);
-  }
-}
+	doCWD: function () {
+		MaxMSP.outlet(["cwd", process.cwd()]);
+	}
+};
 
 module.exports = Helpers;

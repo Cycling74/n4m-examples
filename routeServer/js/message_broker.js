@@ -11,9 +11,9 @@ let uuidv1 = require("uuid/v1");
 let MessageBroker = {
 	listeners: [],
 
-  // add a listener with a callback
-  // ------------------------------
-	addListener: function(func) {
+	// add a listener with a callback
+	// ------------------------------
+	addListener: function (func) {
 		let tmp = {
 			uuid: uuidv1(),
 			callback: func
@@ -22,9 +22,9 @@ let MessageBroker = {
 		return tmp.uuid;
 	},
 
-  // find and remove a listener by id
-  // --------------------------------
-	removeListener: function(id) {
+	// find and remove a listener by id
+	// --------------------------------
+	removeListener: function (id) {
 		this.listeners.forEach((v, i, a) => {
 			if (v.uuid === id) {
 				a.splice(i, 1);
@@ -32,10 +32,10 @@ let MessageBroker = {
 		});
 	},
 
-  // When a message comes in, send it to the listener that has a matching
-  // uuid field. Reject the message if it is not the proper type, or if
-  // it doesn't have a uuid field.
-	brokerMessage: function(args = {}) {
+	// When a message comes in, send it to the listener that has a matching
+	// uuid field. Reject the message if it is not the proper type, or if
+	// it doesn't have a uuid field.
+	brokerMessage: function (args = {}) {
 		// we only accept json-based objects as input.
 		if (typeof args !== "object") {
 			console.log("invalid message - only dictionaries accepted as messages");
@@ -54,7 +54,7 @@ let MessageBroker = {
 			return;
 		}
 
-    // spin through the listeners and send out matches
+		// spin through the listeners and send out matches
 		this.listeners.forEach((v, i) => {
 			try {
 				if ((args.uuid === "all") || (args.uuid === v.uuid)) {
