@@ -39,13 +39,58 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-31",
-					"linecount" : 9,
+					"bubble" : 1,
+					"fontname" : "Arial",
+					"fontsize" : 13.0,
+					"id" : "obj-14",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 402.5, 311.0, 502.0, 127.0 ],
-					"text" : "A little script that allows you to render PNG images from a D3JS script.\n\nClick [script npm install], then [script start] below\n\nSend a [d3] message followed by a valid d3js script file. An example based on Mike Bostock's grouped bar chart is provided. https://bl.ocks.org/mbostock/3887051\n\nFor details on the script, refer here: https://www.znibbl.es/videos/10-node-in-max-02-static-d3js"
+					"patching_rect" : [ 191.5, 95.0, 108.0, 40.0 ],
+					"presentation_linecount" : 2,
+					"text" : "click to start rendering"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"fontname" : "Arial",
+					"fontsize" : 13.0,
+					"id" : "obj-12",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 138.0, 15.0, 232.0, 25.0 ],
+					"presentation_linecount" : 3,
+					"text" : "send valid d3js file to node.script"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"fontname" : "Arial",
+					"fontsize" : 13.0,
+					"id" : "obj-11",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 870.0, 472.0, 98.0, 25.0 ],
+					"text" : "click to start"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-31",
+					"linecount" : 11,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 402.5, 311.0, 465.0, 154.0 ],
+					"text" : "A little script that allows you to render PNG images from a D3JS script.\n\nClick [script npm install], then [script start] below\n\nSend a [d3] message followed by a valid d3js script file. An example based on Mike Bostock's grouped bar chart is provided. https://bl.ocks.org/mbostock/3887051\n\nClick the toggle to start the rendering process\n\nFor details on the script, refer here: https://www.znibbl.es/videos/10-node-in-max-02-static-d3js"
 				}
 
 			}
@@ -93,7 +138,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 41.0, 321.0, 338.0, 203.0 ]
+					"patching_rect" : [ 41.0, 322.0, 338.0, 203.0 ]
 				}
 
 			}
@@ -167,7 +212,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 283.0, 15.0, 59.0, 22.0 ],
+					"patching_rect" : [ 262.0, 52.0, 59.0, 22.0 ],
 					"text" : "r to_node"
 				}
 
@@ -179,7 +224,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 841.5, 437.0, 63.0, 22.0 ],
+					"patching_rect" : [ 804.0, 502.0, 63.0, 22.0 ],
 					"text" : "script stop"
 				}
 
@@ -191,7 +236,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 754.0, 437.0, 64.0, 22.0 ],
+					"patching_rect" : [ 804.0, 472.0, 64.0, 22.0 ],
 					"text" : "script start"
 				}
 
@@ -202,7 +247,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 635.5, 468.0, 61.0, 22.0 ],
+					"patching_rect" : [ 561.5, 502.0, 61.0, 22.0 ],
 					"text" : "s to_node"
 				}
 
@@ -214,7 +259,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 635.5, 437.0, 98.0, 22.0 ],
+					"patching_rect" : [ 561.5, 472.0, 98.0, 22.0 ],
 					"text" : "script npm install"
 				}
 
@@ -223,10 +268,11 @@
 				"box" : 				{
 					"fontface" : 1,
 					"id" : "obj-13",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 402.5, 438.0, 231.0, 20.0 ],
+					"patching_rect" : [ 398.5, 473.0, 134.0, 33.0 ],
 					"text" : "Click this to install necessary libraries:"
 				}
 
@@ -297,6 +343,104 @@
 				}
 
 			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"fontname" : "Arial",
+					"fontsize" : 13.0,
+					"id" : "obj-27",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 661.5, 470.5, 108.0, 25.0 ],
+					"text" : "click to install"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"background" : 1,
+					"bgcolor" : [ 1.0, 0.788235, 0.470588, 1.0 ],
+					"fontface" : 1,
+					"hint" : "",
+					"id" : "obj-26",
+					"ignoreclick" : 1,
+					"legacytextcolor" : 1,
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 132.0, 105.0, 20.0, 20.0 ],
+					"rounded" : 60.0,
+					"text" : "4",
+					"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"background" : 1,
+					"bgcolor" : [ 1.0, 0.788235, 0.470588, 1.0 ],
+					"fontface" : 1,
+					"hint" : "",
+					"id" : "obj-22",
+					"ignoreclick" : 1,
+					"legacytextcolor" : 1,
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 16.0, 16.0, 20.0, 20.0 ],
+					"rounded" : 60.0,
+					"text" : "3",
+					"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"background" : 1,
+					"bgcolor" : [ 1.0, 0.788235, 0.470588, 1.0 ],
+					"fontface" : 1,
+					"hint" : "",
+					"id" : "obj-20",
+					"ignoreclick" : 1,
+					"legacytextcolor" : 1,
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 782.0, 473.0, 20.0, 20.0 ],
+					"rounded" : 60.0,
+					"text" : "2",
+					"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"background" : 1,
+					"bgcolor" : [ 1.0, 0.788235, 0.470588, 1.0 ],
+					"fontface" : 1,
+					"hint" : "",
+					"id" : "obj-93",
+					"ignoreclick" : 1,
+					"legacytextcolor" : 1,
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 538.5, 473.0, 20.0, 20.0 ],
+					"rounded" : 60.0,
+					"text" : "1",
+					"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
+				}
+
+			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -308,6 +452,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-21", 0 ],
+					"midpoints" : [ 216.5, 84.0, 387.0, 84.0, 387.0, 6.0, 412.0, 6.0 ],
 					"source" : [ "obj-16", 1 ]
 				}
 
@@ -336,6 +481,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
+					"midpoints" : [ 271.5, 84.0, 120.0, 84.0, 120.0, 75.0, 36.0, 75.0, 36.0, 48.0, 50.5, 48.0 ],
 					"source" : [ "obj-24", 0 ]
 				}
 
