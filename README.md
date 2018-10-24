@@ -1,4 +1,6 @@
 # Node For Max Examples
+[![Build Status](https://travis-ci.com/Cycling74/n4m-examples.svg?branch=master)](https://travis-ci.com/Cycling74/n4m-examples)
+
 
 Hey Maxers! This repository contains many examples of how to use the Node For Max package in your Max patches. Some were created by Cycling '74, but others are from the Max community! We welcome community contributions and have included a guide on [how to add your own example](#adding-your-own-example). 
 
