@@ -7,11 +7,12 @@
 //              message with a file path.
 //
 // --------------------------------------------------------------------------
+"use strict";
 
 const MaxMSP = require("max-api");
 
 let express = require("express");
-let router = express.Router();
+let router = new express.Router();
 let path = require("path");
 
 let contentFolder = null;

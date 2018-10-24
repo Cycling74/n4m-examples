@@ -3,6 +3,9 @@
 // the Max-based Node host via websockets. It uses fairly standard jQuery
 // to perform its thing...
 // --------------------------------------------------------------------------
+/* global $ */
+"use strict";
+
 
 var exampleSocket = new WebSocket("ws://localhost:7474");
 

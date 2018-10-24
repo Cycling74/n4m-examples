@@ -4,11 +4,11 @@
 //                  with any requesting pages. This is part of the Node for
 //                  Max system for Max 8.
 // --------------------------------------------------------------------------
+"use strict";
 
 const express = require("express");
 const http = require("http");
 const path = require("path");
-const url = require("url");
 
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
@@ -56,12 +56,10 @@ app.use(function (err, req, res, next) {
 //       if you are creating a custom websockets implementation
 // -------------------------------------------------------------
 let server = http.createServer(app);
-let conn = false;
 
 const wss = new WebSocket.Server({ port: 7474 });
 
 wss.on("connection", function connection(ws, req) {
-	const location = url.parse(req.url, true);
 
 	ws.on("message", function incoming(message) {
 		console.log("received: %s", message);

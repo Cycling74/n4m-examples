@@ -5,10 +5,10 @@
 //          something else (like Angular or React), you will need to change
 //          the view engine.
 // ------------------------------------------------------------------------
+"use strict";
 
 var express = require("express");
 var path = require("path");
-var favicon = require("serve-favicon");
 var logger = require("morgan");
 var cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");

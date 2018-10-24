@@ -5,6 +5,7 @@
 //                     any listeners that go 'dead'.
 //
 // --------------------------------------------------------------------------
+"use strict";
 
 let uuidv1 = require("uuid/v1");
 

@@ -3,18 +3,18 @@
 // helpers.js : provide some message-based helper functions.
 //
 // --------------------------------------------------------------------------
+"use strict";
 
-const path = require("path");
 const MaxMSP = require("max-api");
-
-MaxMSP.addHandler("cwd", () => {
-	Helpers.doCWD();
-});
 
 let Helpers = {
 	doCWD: function () {
 		MaxMSP.outlet(["cwd", process.cwd()]);
 	}
 };
+
+MaxMSP.addHandler("cwd", () => {
+	Helpers.doCWD();
+});
 
 module.exports = Helpers;

@@ -10,6 +10,7 @@
 // ---------------------------------------------------------------------
 
 // Begin loading modules
+"use strict";
 
 const maxAPI = require("max-api");
 

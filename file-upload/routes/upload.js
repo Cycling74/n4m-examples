@@ -3,9 +3,10 @@
 // upload.js - the route handler for an upload 'request'.
 //
 // --------------------------------------------------------------------------
+"use strict";
 
 var express = require("express");
-var router = express.Router();
+var router = new express.Router();
 const path = require("path");
 const Max = require("max-api");
 

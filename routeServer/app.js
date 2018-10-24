@@ -5,14 +5,13 @@
 //          something else (like Angular or React), you will need to change
 //          the view engine.
 // ------------------------------------------------------------------------
+"use strict";
 
 let express = require("express");
 let path = require("path");
 let logger = require("morgan");
 let cookieParser = require("cookie-parser");
 let bodyParser = require("body-parser");
-
-let helpers = require("./js/helpers");
 
 let content = require("./routes/content");
 let max = require("./routes/max");

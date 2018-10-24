@@ -1,3 +1,5 @@
+"use strict";
+
 // Require the max-api module to connect to Max via node.script
 const maxAPI = require("max-api");
 

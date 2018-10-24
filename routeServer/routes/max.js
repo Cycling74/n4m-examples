@@ -4,9 +4,10 @@
 //          the brokering mechanism provided in the message_broker.js source.
 //
 // --------------------------------------------------------------------------
+"use strict";
 
 let express = require("express");
-let router = express.Router();
+let router = new express.Router();
 
 const MaxMSP = require("max-api");
 let broker = require("../js/message_broker");

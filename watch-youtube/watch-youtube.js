@@ -1,3 +1,5 @@
+"use strict";
+
 const maxApi = require("max-api");
 const ytdl = require("ytdl-core");
 
