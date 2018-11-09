@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 0,
+			"revision" : 1,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -48,7 +48,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 191.5, 95.0, 108.0, 40.0 ],
-					"presentation_linecount" : 2,
 					"text" : "click to start rendering"
 				}
 
@@ -63,7 +62,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 138.0, 15.0, 232.0, 25.0 ],
-					"presentation_linecount" : 3,
 					"text" : "send valid d3js file to node.script"
 				}
 
@@ -85,12 +83,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-31",
-					"linecount" : 11,
+					"linecount" : 10,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 402.5, 311.0, 465.0, 154.0 ],
-					"text" : "A little script that allows you to render PNG images from a D3JS script.\n\nClick [script npm install], then [script start] below\n\nSend a [d3] message followed by a valid d3js script file. An example based on Mike Bostock's grouped bar chart is provided. https://bl.ocks.org/mbostock/3887051\n\nClick the toggle to start the rendering process\n\nFor details on the script, refer here: https://www.znibbl.es/videos/10-node-in-max-02-static-d3js"
+					"patching_rect" : [ 402.5, 311.0, 465.0, 141.0 ],
+					"text" : "A little script that allows you to render PNG images from a D3JS script.\n\nClick [script npm install], then [script start] below\n\nSend a [d3] message followed by a valid d3js script file. An example based on Mike Bostock's grouped bar chart is provided. https://bl.ocks.org/mbostock/3887051\n\nClick the toggle to start the rendering process\n\nFor details on the script, refer here: https://www.znibbl.es/video/static-d3js"
 				}
 
 			}
