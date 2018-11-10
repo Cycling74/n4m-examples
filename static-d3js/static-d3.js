@@ -1,3 +1,5 @@
+"use strict";
+
 const maxApi = require("max-api");
 const fs = require("fs");
 const D3Node = require("d3-node");

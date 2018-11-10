@@ -1,7 +1,9 @@
+"use strict";
+
 const fs = require("fs");
 const csvString = fs.readFileSync("./data/data.csv", "UTF-8").toString();
 
-module.exports = function(d3, svg, options) {
+module.exports = function (d3, svg, options) {
 
 	let g = svg.append("g").attr("transform", "translate(" + options.margin.left + "," + options.margin.top + ")");
 
@@ -22,23 +24,23 @@ module.exports = function(d3, svg, options) {
 
 	let keys = data.columns.slice(1);
 
-	x0.domain(data.map(function(d) { return d.State; }));
+	x0.domain(data.map(function (d) { return d.State; }));
 	x1.domain(keys).rangeRound([0, x0.bandwidth()]);
-	y.domain([0, d3.max(data, function(d) { return d3.max(keys, function(key) { return +d[key]; }); })]).nice();
+	y.domain([0, d3.max(data, function (d) { return d3.max(keys, function (key) { return +d[key]; }); })]).nice();
 
 	g.append("g")
 		.selectAll("g")
 		.data(data)
 		.enter().append("g")
-		.attr("transform", function(d) { return "translate(" + x0(d.State) + ",0)"; })
+		.attr("transform", function (d) { return "translate(" + x0(d.State) + ",0)"; })
 		.selectAll("rect")
-		.data(function(d) { return keys.map(function(key) { return {key: key, value: d[key]}; }); })
+		.data(function (d) { return keys.map(function (key) { return {key: key, value: d[key]}; }); })
 		.enter().append("rect")
-		.attr("x", function(d) { return x1(d.key); })
-		.attr("y", function(d) { return y(d.value); })
+		.attr("x", function (d) { return x1(d.key); })
+		.attr("y", function (d) { return y(d.value); })
 		.attr("width", x1.bandwidth())
-		.attr("height", function(d) { return options.height - y(d.value); })
-		.attr("fill", function(d) { return z(d.key); });
+		.attr("height", function (d) { return options.height - y(d.value); })
+		.attr("fill", function (d) { return z(d.key); });
 
 	g.append("g")
 		.attr("class", "axis")
@@ -64,7 +66,7 @@ module.exports = function(d3, svg, options) {
 		.selectAll("g")
 		.data(keys.slice().reverse())
 		.enter().append("g")
-		.attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+		.attr("transform", function (d, i) { return "translate(0," + i * 20 + ")"; });
 
 	legend.append("rect")
 		.attr("x", options.width - 19)
@@ -76,6 +78,6 @@ module.exports = function(d3, svg, options) {
 		.attr("x", options.width - 24)
 		.attr("y", 9.5)
 		.attr("dy", "0.32em")
-		.text(function(d) { return d; });
+		.text(function (d) { return d; });
 
 };
