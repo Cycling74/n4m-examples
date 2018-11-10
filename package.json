@@ -4,7 +4,9 @@
   "description": "Example patchers and node scripts for the Node for Max package",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint",
+    "lint": "eslint ./ ",
+    "lint-fix": "eslint ./ --fix"
   },
   "repository": {
     "type": "git",
@@ -22,11 +24,16 @@
   },
   "contributors": [
     "Florian Demmer <florian@cycling74.com>",
-    "Sam Tarakajian <sam@cycling74.com>"
+    "Sam Tarakajian <sam@cycling74.com>",
+    "Cassie Tarakajian <cassie@cycling74.com>"
   ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Cycling74/n4m-examples/issues"
   },
-  "homepage": "https://github.com/Cycling74/n4m-examples#readme"
+  "homepage": "https://github.com/Cycling74/n4m-examples#readme",
+  "devDependencies": {
+    "eslint": "^5.7.0",
+    "eslint-config-c74": "^1.0.0"
+  }
 }

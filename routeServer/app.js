@@ -5,14 +5,13 @@
 //          something else (like Angular or React), you will need to change
 //          the view engine.
 // ------------------------------------------------------------------------
+"use strict";
 
 let express = require("express");
 let path = require("path");
 let logger = require("morgan");
 let cookieParser = require("cookie-parser");
 let bodyParser = require("body-parser");
-
-let helpers = require("./js/helpers");
 
 let content = require("./routes/content");
 let max = require("./routes/max");
@@ -34,14 +33,14 @@ app.use("/content", content);   // check for /content first ...
 app.use("/", max);              // then everything else ...
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
 	let err = new Error("Not Found");
 	err.status = 404;
 	next(err);
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
 	// set locals, only providing error in development
 	res.locals.message = err.message;
 	res.locals.error = req.app.get("env") === "development" ? err : {};

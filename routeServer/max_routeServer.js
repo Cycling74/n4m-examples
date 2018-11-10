@@ -4,6 +4,7 @@
 //                      but renamed to prevent searchpath clashes. Calls
 //                      the local app.js to actually run the application.
 // ------------------------------------------------------------------------
+"use strict";
 
 let app = require("./app");
 let debug = require("debug")("node-routetest:server");
@@ -19,12 +20,12 @@ let port;
 function normalizePort(val) {
 	let localPort = parseInt(val, 10);
 
-  // named pipe
+	// named pipe
 	if (isNaN(localPort)) {
 		return val;
 	}
 
-  // port number
+	// port number
 	if (localPort >= 0) {
 		return localPort;
 	}

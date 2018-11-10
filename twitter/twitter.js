@@ -9,6 +9,8 @@
 //
 // ---------------------------------------------------------------------
 
+"use strict";
+
 const maxAPI = require("max-api");
 
 // Attempt to load the dotenv module, which is needed to load the .env file containing the Twitter API keys.

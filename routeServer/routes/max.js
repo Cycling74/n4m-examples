@@ -4,9 +4,10 @@
 //          the brokering mechanism provided in the message_broker.js source.
 //
 // --------------------------------------------------------------------------
+"use strict";
 
 let express = require("express");
-let router = express.Router();
+let router = new express.Router();
 
 const MaxMSP = require("max-api");
 let broker = require("../js/message_broker");
@@ -19,9 +20,9 @@ let broker = require("../js/message_broker");
 
 MaxMSP.addHandler("test", (args) => console.log(args));
 MaxMSP.addHandler(MaxMSP.MESSAGE_TYPES.ALL, (handled, args) => {
-  if (!handled) {
-    broker.brokerMessage(args);
-  }
+	if (!handled) {
+		broker.brokerMessage(args);
+	}
 });
 
 // ------------------------
@@ -61,13 +62,13 @@ function decodeKeys(obj, ind) {
 		let typ = typeof(obj[theKeys[i]]);
 		if (typ !== "object") {
 			outContent += tmp + "<b>" + theKeys[i] + ":</b> " + obj[theKeys[i]] + "<br/>";
-      if (indentLevel < 1) {
-        outContent += "<br />";
-      }
+			if (indentLevel < 1) {
+				outContent += "<br />";
+			}
 		} else {
 			outContent += tmp + "<b>" + theKeys[i] + ":</b><br/>";
 			outContent += decodeKeys(obj[theKeys[i]], indentLevel + 1);
-      outContent += "<br />";
+			outContent += "<br />";
 		}
 	}
 	return outContent;
@@ -78,10 +79,10 @@ function decodeKeys(obj, ind) {
 // deal with the return information that Max provides.
 // ------------------------------------------------------------------------
 
-router.all("/*", function(req, res, next) {
+router.all("/*", function (req, res, next) {
 
-  // tear apart the request for useful information
-  let tmpTokens = req.path.split("/").filter(e => !isEmpty(e));
+	// tear apart the request for useful information
+	let tmpTokens = req.path.split("/").filter(e => !isEmpty(e));
 	let outDict = {
 		uuid: "",
 		ip: req.ip,
@@ -93,12 +94,12 @@ router.all("/*", function(req, res, next) {
 		query: req.query
 	};
 
-  // then deal with the whole thing in a promise
+	// then deal with the whole thing in a promise
 	let reqFunc = new Promise((resolve, reject) => {
 		let myID = "";
 
 		// time out if more than two seconds
-		let intrHandle = setTimeout(function() {
+		let intrHandle = setTimeout(function () {
 			reject("timeout");
 		}, 2000);
 
@@ -111,17 +112,17 @@ router.all("/*", function(req, res, next) {
 			if (val.hasOwnProperty("httpStatus")) {
 				// deal with an http status message
 				resolve({
-          kind: "httpStatus",
-          content: val.httpStatus
-        });
-			} else if (val.hasOwnProperty("htmlContent")){
-        // deal with an html content message
-        resolve({
-          kind: "htmlContent",
-          title: val.htmlTitle || "From Max",
-          content: val.htmlContent
-        })
-      } else {
+					kind: "httpStatus",
+					content: val.httpStatus
+				});
+			} else if (val.hasOwnProperty("htmlContent")) {
+				// deal with an html content message
+				resolve({
+					kind: "htmlContent",
+					title: val.htmlTitle || "From Max",
+					content: val.htmlContent
+				});
+			} else {
 				// the generic case
 				delete val.uuid;
 				resolve({kind: "generic", content: val});
@@ -134,22 +135,22 @@ router.all("/*", function(req, res, next) {
 		MaxMSP.outlet(outDict);
 	});
 
-  // manage the result of the promise by responding with
-  // an appropriate rendering and content set, and deal
-  // with errors using a 500 error.
+	// manage the result of the promise by responding with
+	// an appropriate rendering and content set, and deal
+	// with errors using a 500 error.
 	reqFunc.then((obj) => {
 		if (obj.kind === "httpStatus") {
 			res.writeHead(obj.content);
 			res.end();
 		} else if (obj.kind === "htmlContent") {
-      res.render("max_html", {
-        title: obj.title,
-        html: obj.content
-      });
-    } else if (obj.kind === "generic") {
+			res.render("max_html", {
+				title: obj.title,
+				html: obj.content
+			});
+		} else if (obj.kind === "generic") {
 			res.render("max_data", {
-        html: decodeKeys(obj.content)
-      });
+				html: decodeKeys(obj.content)
+			});
 		}
 	}).catch((err) => {
 		res.writeHead(500);
