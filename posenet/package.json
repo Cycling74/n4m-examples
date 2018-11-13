@@ -32,11 +32,9 @@
     "dat.gui": "^0.7.2",
     "electron": "^3.0.8",
     "eslint": "^4.19.1",
-    "eslint-config-google": "^0.9.1",
     "parcel-bundler": "~1.10.3"
   },
   "eslintConfig": {
-    "extends": "google",
     "rules": {
       "require-jsdoc": 0,
       "valid-jsdoc": 0
