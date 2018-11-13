@@ -20,6 +20,7 @@ You might find an error in an example, or have a request for a example you would
 * [tonal-chord-builder](https://github.com/Cycling74/n4m-examples/tree/master/tonal-chord-builder): Generate different chords based on a root note. By [Cycling '74](https://github.com/Cycling74).
 * [twitter](https://github.com/Cycling74/n4m-examples/tree/master/twitter): Communicate with Twitter from Max. By [Cycling '74](https://github.com/Cycling74).
 * [watch-youtube](https://github.com/Cycling74/n4m-examples/tree/master/watch-youtube): Stream YouTube videos from Max. By Julian from [Znibbles](https://www.znibbl.es).
+* [PoseNet](https://github.com/Cycling74/n4m-examples/tree/master/posenet): Real-time Human Pose Estimation via webcam. By Yuichi Yogo.
 
 ## Adding your own Example
 
