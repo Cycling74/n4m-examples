@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 79.0, 1070.0, 1087.0 ],
+		"rect" : [ 134.0, 79.0, 1070.0, 1087.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,69 @@
 		"subpatcher_template" : "",
 		"globalpatchername" : "global",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-12",
+					"linecount" : 20,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 321.0, 488.0, 50.0, 277.0 ],
+					"text" : "\"You find yourself in a cold, dark dungeon. All around you are fragments of bone, old CD-R's, and frayed pieces of cable.\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"linecount" : 20,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 431.0, 511.0, 50.0, 277.0 ],
+					"text" : "\"You find yourself in a cold, dark dungeon. All around you are fragments of bone, old CD-R's, and frayed pieces of cable.\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 102.0, 231.0, 128.0, 22.0 ],
+					"text" : "route placeDescription"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"linecount" : 3,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 136.0, 141.0, 269.0, 49.0 ],
+					"text" : "placeDescription \"You find yourself in a cold, dark dungeon. All around you are fragments of bone, old CD-R's, and frayed pieces of cable.\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "list", "" ],
+					"patching_rect" : [ 556.0, 526.0, 29.5, 22.0 ],
+					"text" : "hi"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-197",
 					"maxclass" : "newobj",
@@ -453,14 +516,14 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 335.0, 309.0, 183.0, 22.0 ],
-													"restore" : [ 1.0 ],
+													"restore" : [ 0.5 ],
 													"saved_object_attributes" : 													{
 														"parameter_enable" : 0,
 														"parameter_mappable" : 0
 													}
 ,
 													"text" : "pattr @bindto ::global::textSpeed",
-													"varname" : "u144008195"
+													"varname" : "u663003668"
 												}
 
 											}
@@ -1356,7 +1419,8 @@
 				"box" : 				{
 					"frozen_box_attributes" : [ "textcolor" ],
 					"frozen_object_attributes" : 					{
-						"gl_color" : [ 1.0, 1.0, 1.0, 1.0 ]
+						"gl_color" : [ 1.0, 1.0, 1.0, 1.0 ],
+						"position" : [ -1.0, 0.0, 0.0 ]
 					}
 ,
 					"id" : "obj-73",
@@ -1401,7 +1465,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 273.0, 25.0, 63.0, 22.0 ],
+					"patching_rect" : [ 347.0, 25.0, 63.0, 22.0 ],
 					"text" : "script stop"
 				}
 
@@ -1425,8 +1489,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 199.0, 33.685394287109375, 42.0, 22.0 ],
-					"text" : "debug"
+					"patching_rect" : [ 199.0, 33.685394287109375, 97.0, 22.0 ],
+					"text" : "placeDescription"
 				}
 
 			}
@@ -1456,7 +1520,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 519.0, 120.0, 400.0, 220.0 ],
+					"patching_rect" : [ 516.0, 103.0, 400.0, 220.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -1468,7 +1532,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 102.0, 74.0, 353.0, 22.0 ],
+					"patching_rect" : [ 102.0, 74.0, 345.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"args" : [ "max" ],
 						"autostart" : 1,
@@ -1478,7 +1542,7 @@
 						"watch" : 1
 					}
 ,
-					"text" : "node.script ta-player-main.js @args max @autostart 1 @watch 1"
+					"text" : "node.script samplequest.js @args max @autostart 1 @watch 1"
 				}
 
 			}
@@ -1521,6 +1585,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-101", 0 ],
+					"order" : 1,
+					"source" : [ "obj-197", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 1 ],
+					"order" : 0,
 					"source" : [ "obj-197", 0 ]
 				}
 
@@ -1529,6 +1602,22 @@
 				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-2", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 1 ],
+					"order" : 0,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"order" : 1,
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}
@@ -1576,6 +1665,22 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-10", 1 ],
+					"order" : 0,
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-197", 0 ],
+					"order" : 1,
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-73", 0 ],
 					"source" : [ "obj-80", 0 ]
 				}
@@ -1597,9 +1702,9 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "ta-player-main.js",
-				"bootpath" : "~/git/n4m-examples/text-adventure/ta-player/ta-player-core",
-				"patcherrelativepath" : "../ta-player-core",
+				"name" : "samplequest.js",
+				"bootpath" : "~/git/n4m-examples/text-adventure/ta-player/samplequest",
+				"patcherrelativepath" : "../samplequest",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -1614,13 +1719,6 @@
 				"name" : "resize_n4m_monitor_patcher.js",
 				"bootpath" : "~/git/max/node-externs/dist/Node For Max_osx/patchers/debug-monitor",
 				"patcherrelativepath" : "../../../../max/node-externs/dist/Node For Max_osx/patchers/debug-monitor",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "ta-player-util.js",
-				"bootpath" : "~/git/n4m-examples/text-adventure/ta-player/code",
-				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

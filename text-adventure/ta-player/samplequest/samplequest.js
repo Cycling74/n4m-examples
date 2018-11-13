@@ -1,5 +1,10 @@
-const { Engine } = require("ta-player-core");
-const engine = new Engine();
+console.log("Haven't tried to require anything yet...");
+
+const { TAEngine } = require("ta-player-core");
+const Dungeon = require("./places/dungeon");
+const engine = new TAEngine();
+
+engine.currentPlace = new Dungeon();
 
 console.log("Text Adventure Player loaded");
 
