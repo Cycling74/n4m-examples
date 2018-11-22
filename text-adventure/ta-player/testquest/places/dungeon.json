@@ -1,0 +1,73 @@
+{
+	"id": "DUNGEON",
+	"description": "You find yourself within a gloomy dungeon. It's pitch black, save for the light from a torch outside the barred door. The only sound is the gentle rattling of chains, animated by the feeble writhing of your hopeless inmates.",
+	"placeState": {
+		"hasSkull": true
+	},
+	"options": [
+		{
+			"type": "action",
+			"prompt": "Open door",
+			"requires": {
+				"placeState": {
+					"doorSmashed": true
+				}
+			},
+			"failure": "You push and push at the heavy locked door, but it remains locked.",
+			"success": "With the lock smashed, the door swings open easily."
+		},
+		{
+			"type": "action",
+			"prompt": "Pick up skull",
+			"success": "You pick up the skull. It's heavier than you expected.",
+			"enabled": {
+				"placeState": {
+					"hasSkull": true
+				}
+			},
+			"complete": {
+				"inventory": {
+					"SKULL": 1
+				},
+				"placeState": {
+					"hasSkull": false
+				}
+			}
+		},
+		{
+			"type": "action",
+			"prompt": "Smash lock",
+			"enabled": {
+				"inventory": {
+					"SKULL": true
+				},
+				"placeState": {
+					"doorSmashed": false
+				}
+			},
+			"success": "The skull proves effective as a lock-smashing device. With a reverberating thud, the lock breaks in half and falls to the floor.",
+			"complete": {
+				"inventory": {
+					"SKULL": -1
+				},
+				"placeState": {
+					"doorSmashed": true
+				}
+			}
+		},
+		{
+			"type": "action",
+			"prompt": "Leave the dungeon",
+			"requires": {
+				"placeState": {
+					"doorSmashed": true
+				}
+			},
+			"success": "You leave the dungeon and step out into the open air.",
+			"failure": "Yeah, I bet you would like to leave the dungeon, wouldn't you?",
+			"complete": {
+				"location": "VICTORY"
+			}
+		}
+	]
+}
