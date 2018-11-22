@@ -1,7 +1,15 @@
-const fs = require("fs").promises;
+const fs = require("fs");
 const path = require("path");
 const TAPlace = require("./place");
+const { promisify } = require("util");
+const readdir = promisify(fs.readdir);
+const readFile = promisify(fs.readFile);
 
+async function asyncForEach(array, callback) {
+	for (let index = 0; index < array.length; index++) {
+		await callback(array[index], index, array);
+	}
+}
 class TAGameState {
 	constructor() {
 		this._inventory = [];
@@ -13,6 +21,14 @@ class TAGameState {
 	get currentPlace() {
 		if (!this._currentPlaceId) return null;
 		return this._places[this._currentPlaceId];
+	}
+
+	get currentPlaceId() {
+		return this._currentPlaceId;
+	}
+
+	set currentPlaceId(currentPlaceId) {
+		this._currentPlaceId = currentPlaceId;
 	}
 
 	get inventory() {
@@ -48,21 +64,21 @@ class TAGameState {
 	}
 
 	async initWithFolder(questpath) {
-		const folder = await fs.readdir(questpath);
+		const folder = await readdir(questpath);
 		await this._validateFolderStructure(folder);
-		if (folder.places) {
-			const placesFolder = path.join(questpath, folder.places);
-			const places = await fs.readdir(placesFolder);
-			places.forEach(async (placepath) => {
+		if (folder.indexOf("places") !== -1) {
+			const placesFolder = path.join(questpath, "places");
+			const places = await readdir(placesFolder);
+			await asyncForEach(places, async (placepath) => {
 				const placePath = path.join(placesFolder, placepath);
 				const place = new TAPlace();
 				await place.initWithFile(placePath);
 				this._places[place.id] = place;
 			});
 		}
-		const questraw = await fs.readFile(path.join(questpath, "quest.json"));
-		const questJSON = JSON.parse(questraw);
-		this._currentPlaceId = questJSON.startId;
+		const questraw = await readFile(path.join(questpath, "quest.json"));
+		const questJSON = JSON.parse(questraw.toString());
+		this._currentPlaceId = questJSON.start;
 	}
 
 	optionWouldSucceed(option) {

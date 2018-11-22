@@ -1,5 +1,8 @@
-const fs = require("fs").promises;
+const fs = require("fs");
 const path = require("path");
+const { promisify } = require("util");
+const readFile = promisify(fs.readFile);
+const TAOption = require("./option");
 
 const VALID_KEYS = Object.freeze({
 	"id": true,
@@ -16,8 +19,12 @@ class TAPlace {
 		this._state = {};
 	}
 
+	get id() {
+		return this._id;
+	}
+
 	get description() {
-		return this.description;
+		return this._description;
 	}
 
 	get placeState() {
@@ -31,7 +38,7 @@ class TAPlace {
 	getEnabledOptions(playerState, inventory) {
 		const placeState = this._state;
 		return this._options.filter(option => {
-			return option.enabled(placeState, playerState, inventory);
+			return option.isEnabled(placeState, playerState, inventory);
 		});
 	}
 
@@ -70,15 +77,15 @@ class TAPlace {
 	}
 
 	async initWithFile(filepath) {
-		const fileraw = await fs.readFile(filepath);
-		const fileJSON = JSON.parse(fileraw);
+		const fileraw = await readFile(filepath);
+		const fileJSON = JSON.parse(fileraw.toString());
 		this._validateFileContents(filepath, fileJSON);
 		this._id = fileJSON.id;
 		this._description = fileJSON.description;
 		if(!!fileJSON.options) {
-			fileJSON.option.forEach(optionJSON => {
+			fileJSON.options.forEach(optionJSON => {
 				try {
-					const option = new Option(optionJSON);
+					const option = new TAOption(optionJSON);
 					this._options.push(option);
 				} catch (e) {
 					throw new Error(`Place ${path.basename(filepath)} option error: ${e.message}`);

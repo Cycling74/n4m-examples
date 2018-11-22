@@ -84,8 +84,8 @@ class TAOption {
 		if (!!conditions.inventory) {
 			let lenabled = true;
 			Object.keys(conditions.inventory).forEach(key => {
-				const inventoryItem = inventory.find(item => item.id === key);
-				if (!!conditions.inventory !== !!inventoryItem) lenabled = false;
+				const inventoryItem = inventory.find(item => item === key);
+				if (!!conditions.inventory[key] !== !!inventoryItem) lenabled = false;
 			});
 			if (!lenabled) return false;
 		}
@@ -94,7 +94,7 @@ class TAOption {
 		if (!!conditions.playerState) {
 			let lenabled = true;
 			Object.keys(conditions.playerState).forEach(key => {
-				if (!!playerState.key !== !!conditions.playerState) lenabled = false;
+				if (!!playerState[key] !== !!conditions.playerState[key]) lenabled = false;
 			});
 			if (!lenabled) return false;
 		}
@@ -103,7 +103,7 @@ class TAOption {
 		if (!!conditions.placeState) {
 			let lenabled = true;
 			Object.keys(conditions.placeState).forEach(key => {
-				if (!!placeState.key !== !!conditions.placeState) lenabled = false;
+				if (!!placeState[key] !== !!conditions.placeState[key]) lenabled = false;
 			});
 			if (!lenabled) return false;
 		}

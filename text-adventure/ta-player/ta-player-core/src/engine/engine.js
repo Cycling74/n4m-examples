@@ -7,6 +7,10 @@ class TAEngine extends EventEmitter {
 		this._gameState = new TAGameState();
 	}
 
+	get inventory() {
+		return this._gameState.inventory;
+	}
+
 	get someDescriptionJustToMakeSureItsWorking() {
 		return "This is a string or something";
 	}
@@ -19,18 +23,19 @@ class TAEngine extends EventEmitter {
 			let delta = changes[key];
 			if (delta > 0) {
 				while (delta > 0) {
-					const matchingIdx = newInventory.findIndex(invKey => invKey === key);
-					if (matchingIdx !== -1) newInventory.splice(matchingIdx, 1);
+					newInventory.push(key);
 					delta--;
 				}
 			}
 			else if (delta < 0) {
 				while (delta < 0) {
-					newInventory.push(key);
+					const matchingIdx = newInventory.findIndex(invKey => invKey === key);
+					if (matchingIdx !== -1) newInventory.splice(matchingIdx, 1);
 					delta++;
 				}
 			}
 		});
+		return newInventory;
 	}
 
 	_updatedState(oldState, changes) {
@@ -45,11 +50,15 @@ class TAEngine extends EventEmitter {
 		return Object.assign(oldState, changes);
 	}
 
+	currentPlaceDescription() {
+		return this._gameState.getCurrentDescription();
+	}
+
 	doEnabledOptionAtIndex(idx) {
 		const option = this._gameState.getEnabledOptions()[idx];
 
 		// Check to see if the option would be successful given the game state.
-		if (this._gameState.optionWouldSucceed) {
+		if (this._gameState.optionWouldSucceed(option)) {
 			// Print out the success message
 			if (!!option.success) {
 				this.post(option.success);
@@ -77,25 +86,32 @@ class TAEngine extends EventEmitter {
 					);
 					this._gameState.inventory = updatedInventory;
 				}
+				if (!!option.complete.location) {
+					this._gameState.currentPlaceId = option.complete.location;
+				}
+			}
+		} else {
+			if (!!option.failure) {
+				this.post(option.failure);
 			}
 		}
 	}
 
-	doOption(optionIndex) {
-		if (!!this.currentPlace) {
-			const options = this.currentPlace.options;
-			if (options.length > optionIndex) {
-				const option = options[optionIndex];
-				if (option.action) option.action();
-				if (option.description) {
-					this.emit("action", option.description);
-				}
-			}
-		}
+	enabledOptions() {
+		return this._gameState.getEnabledOptions();
+	}
+
+	async loadFolderAtPath(folderpath) {
+		this._gameState.reset();
+		await this._gameState.initWithFolder(folderpath);
 	}
 
 	post(message) {
 		console.log(message);
+	}
+
+	stateAsString() {
+		return `${this._gameState.inventory} \n ${this._gameState.currentPlace.description} \n ${this._gameState.getEnabledOptions}`;
 	}
 }
 
