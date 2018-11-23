@@ -1,25 +1,31 @@
 const EventEmitter = require("events");
 
+const BREAK_PAUSE = 250;
 const PERIOD_PAUSE = 250;
 const COMMA_PAUSE = 100;
 const OTHER_PAUSE = 30;
+const TEXT_SPEED = 0.5;
 
 class TATypewriter extends EventEmitter {
 	constructor() {
 		super();
-		this._timers = {};
-		this._phrases = {};
-		this._positions = {};
-		this._typePhrase = (keyword) => {
-			if (this._positions[keyword] < this._phrases[keyword].length) {
-				const nextChar = this._phrases[keyword][this._positions[keyword]];
-				const delay = nextChar === "." ? PERIOD_PAUSE : (nextChar === "," ? COMMA_PAUSE : OTHER_PAUSE);
-				this._positions[keyword]++;
-				this.emit("type", keyword, this._phrases[keyword].slice(0, this._positions[keyword]));
-				this._timers[keyword] = setTimeout(this._typePhrase, delay, keyword);
-			} else {
-				delete this._phrases[keyword];
-				delete this._timers[keyword];
+		this._timer = null;
+		this._phrases = [];
+		this._typePhrase = () => {
+			if (this._phrases.length) {
+				const phrase = this._phrases[0];
+				let delay = BREAK_PAUSE;
+				if (phrase.position < phrase.phrase.length) {
+					const nextChar = phrase.phrase[phrase.position];
+					delay = nextChar === "." ? PERIOD_PAUSE : (nextChar === "," ? COMMA_PAUSE : OTHER_PAUSE);
+					phrase.position++;
+					this.emit("type", phrase.keyword, phrase.phrase.slice(0, phrase.position));
+				} else {
+					this._phrases.splice(0, 1);
+				}
+				if (this._phrases.length) {
+					this._timer = setTimeout(this._typePhrase, delay * TEXT_SPEED);
+				}
 			}
 		};
 	}
@@ -34,17 +40,23 @@ class TATypewriter extends EventEmitter {
 		}
 	}
 
-	beginTypingPhrase(keyword, phrase) {
-		this._flushPhraseForKeyword(keyword);
-		this._phrases[keyword] = phrase;
-		this._positions[keyword] = 0;
-		this._typePhrase(keyword);
+	flushAllPhrases() {
+		if (this._timer) {
+			clearTimeout(this._timer);
+			this._timer = null;
+		}
+		Object.keys(this._phrases).forEach(phrase => {
+			this.emit("type", phrase.keyword, phrase.phrase);
+		});
 	}
 
-	flushAllPhrases() {
-		Object.keys(this._phrases).forEach(phrase => {
-			this._flushPhraseForKeyword(phrase);
+	pushPhraseToType(keyword, phrase) {
+		this._phrases.push({
+			keyword, phrase, position: 0
 		});
+		if (this._phrases.length === 1) {
+			this._typePhrase();
+		}
 	}
 }
 

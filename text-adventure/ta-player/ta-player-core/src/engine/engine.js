@@ -15,6 +15,12 @@ class TAEngine extends EventEmitter {
 		return "This is a string or something";
 	}
 
+	_emitEnabledOptions() {
+		this._gameState.getEnabledOptions().forEach((option, idx) => {
+			this.emit("text", `option-${idx + 1}`, option.prompt);
+		});
+	}
+
 	_updatedInventory(oldInventory, changes) {
 		// Each change is just gonna be how much of an item with a given ID you
 		// need to add or remove from your inventory
@@ -55,13 +61,17 @@ class TAEngine extends EventEmitter {
 	}
 
 	doEnabledOptionAtIndex(idx) {
-		const option = this._gameState.getEnabledOptions()[idx];
+		const options = this._gameState.getEnabledOptions();
+		if (idx >= options.length) return;
+		const option = options[idx];
+		const oldPlace = this._gameState.currentPlaceId;
+		this.emit("clear");
 
 		// Check to see if the option would be successful given the game state.
 		if (this._gameState.optionWouldSucceed(option)) {
 			// Print out the success message
 			if (!!option.success) {
-				this.post(option.success);
+				this.emit("text", "placeDescription", option.success);
 			}
 			// Check if there's anything to update on completion
 			if (!!option.complete) {
@@ -92,9 +102,14 @@ class TAEngine extends EventEmitter {
 			}
 		} else {
 			if (!!option.failure) {
-				this.post(option.failure);
+				this.emit("text", "placeDescription", option.failure);
 			}
 		}
+
+		if (this._gameState.currentPlaceId !== oldPlace) {
+			this.emit("text", "placeDescription", this._gameState.getCurrentDescription());
+		}
+		this._emitEnabledOptions();
 	}
 
 	enabledOptions() {
@@ -104,10 +119,8 @@ class TAEngine extends EventEmitter {
 	async loadFolderAtPath(folderpath) {
 		this._gameState.reset();
 		await this._gameState.initWithFolder(folderpath);
-	}
-
-	post(message) {
-		this.emit("text", message);
+		this.emit("text", "placeDescription", this._gameState.getCurrentDescription());
+		this._emitEnabledOptions();
 	}
 
 	stateAsString() {
