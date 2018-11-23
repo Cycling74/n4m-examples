@@ -1,16 +1,22 @@
 const maxApi = require("max-api");
 
 class MaxInterface {
-	bind(engine) {
+	bind(engine, typewriter) {
+		engine.on("text", (text) => {
+			typewriter.beginTypingPhrase("text", text);
+		});
+		typewriter.on("type", (keyword, phrase) => {
+			maxApi.outlet(keyword, phrase);
+		});
 		maxApi.addHandlers({
 			debug: () => {
-				maxApi.outlet(engine.someDescriptionJustToMakeSureItsWorking);
+				typewriter.beginTypingPhrase("text", engine.someDescriptionJustToMakeSureItsWorking);
 			},
 			placeDescription: () => {
-				maxApi.outlet("placeDescription", engine.placeDescription);
+				typewriter.beginTypingPhrase("placeDescription", engine.currentPlaceDescription());
 			},
 			optionPrompts: () => {
-				const options = engine.placeOptions;
+				const options = engine.enabledOptions();
 				const prompts = options.map((option) => option.prompt);
 				maxApi.outlet("optionPrompts", prompts);
 			}

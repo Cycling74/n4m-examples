@@ -107,7 +107,7 @@ class TAEngine extends EventEmitter {
 	}
 
 	post(message) {
-		console.log(message);
+		this.emit("text", message);
 	}
 
 	stateAsString() {
