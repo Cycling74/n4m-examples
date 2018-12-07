@@ -46,7 +46,7 @@ I suggest using something like `nodenv`, `nodebrew`, or any type of version cont
 
 The flow of the entire process is as follows:
 
-1. A user will open `main.maxpat` and hit `npm run setup` that is connected to `'node.script index.is'`.  
+1. A user will open `main.maxpat` and hit `npm run setup` that is connected to `'node.script index.js'`.  
 1. This will fire the npm script written in `./package.json`, which has 3 tasks:  
   2.1 Install the package for the top-level folder. (here)  
   2.2 Install the package in the `electron` folder.  
