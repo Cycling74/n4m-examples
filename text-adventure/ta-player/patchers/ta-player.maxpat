@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 1,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 722.0, 79.0, 743.0, 1087.0 ],
+		"rect" : [ 577.0, 79.0, 743.0, 1087.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -485,7 +485,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 613.0, 987.0, 127.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "text 4. Leave dungeon"
 				}
 
@@ -860,7 +859,7 @@
 					"frozen_object_attributes" : 					{
 						"gl_color" : [ 1.0, 1.0, 1.0, 1.0 ],
 						"line_length" : 500.0,
-						"position" : [ -1.0, 0.0, 0.0 ]
+						"position" : [ -1.0, 0.699999988079071, 0.0 ]
 					}
 ,
 					"id" : "obj-73",

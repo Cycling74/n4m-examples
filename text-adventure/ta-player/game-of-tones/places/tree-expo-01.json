@@ -1,0 +1,12 @@
+{
+	"id": "TREE-EXPO-01",
+	"description": "You scratch your head. \"Well, I don't think it's a very thick forest.\" \"More of a copse than a forest, really,\" Alvin offers. \"Yes, more of a copse. Anyway, you can see daylight on the other side, so I don't think we'd have to cut through too many to make a passage for the device. On the other hand, it might be smarter to go around. We could set off right away, or we could scout around first.\"",
+	"options": [
+		{
+			"prompt": "Continue explaining",
+			"complete": {
+				"location": "TREE-EXPO-02"
+			}
+		}
+	]
+}

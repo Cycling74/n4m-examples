@@ -1,0 +1,13 @@
+{
+	"id": "INTRO-MAP",
+	"description": "By now you must be at least fifty miles south of the Great Glass Lake, though it's been difficult to reckon with the constant storms and overcast skies. However the map details are sketchy, and this thick line of trees in front of you certainly isn't marked. Near as you can tell, your destination must be just on the other side.",
+	"options": [
+		{
+			"type": "action",
+			"prompt": "Okay",
+			"complete": {
+				"location": "INTRO"
+			}
+		}
+	]
+}

@@ -1,0 +1,27 @@
+{
+	"id": "TREE-EXPO-02",
+	"description": "\"In any case, we should choose soon. Don't want to stand around in the cold.\" \"Right you are, captain.\" Alvin gazes intently into the trees. \"I must say, I hope we're not help up for too long. I've never seen a Sampling before. I feel like I'm going to jump out of my skin.\" You smile. \"Of course, it's more something you hear than something you see. But I admit, I'm excited too. Now, what should we do?\"",
+	"options": [
+		{
+			"type": "action",
+			"prompt": "Cut through",
+			"complete": {
+				"location": "TREE-CUT-01"
+			}
+		},
+		{
+			"type": "action",
+			"prompt": "Go around",
+			"complete": {
+				"location": "TREE-AROUND-01"
+			}
+		},
+		{
+			"type": "action",
+			"prompt": "Scout the area",
+			"complete": {
+				"location": "TREE-SCOUT-01"
+			}
+		}
+	]
+}

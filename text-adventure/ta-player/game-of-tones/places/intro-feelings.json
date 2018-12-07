@@ -1,0 +1,13 @@
+{
+	"id": "INTRO-FEELINGS",
+	"description": "\"How are you holding up?\" you ask. \"Just fine ma'am, though to be honest I'm starving, and sick of eating chocolate and nuts every day. What I wouldn't give for a hot bowl of soup. Though, I guess I wouldn't want to carry it this far into the frozen south either.\"" ,
+	"options": [
+		{
+			"type": "action",
+			"prompt": "Ask about the supplies",
+			"complete": {
+				"location": "INTRO-SUPPLIES-02"
+			}
+		}
+	]
+}

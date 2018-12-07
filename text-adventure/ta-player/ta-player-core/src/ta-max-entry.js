@@ -8,6 +8,6 @@ const writer = new TATypewriter();
 const face = new MaxInterface();
 face.bind(engine, writer);
 
-engine.loadFolderAtPath(path.resolve(__dirname, "../../testquest")).then(() => {
+engine.loadFolderAtPath(path.resolve(__dirname, "../../game-of-tones")).then(() => {
 	console.log("Loaded game successfully");
 });

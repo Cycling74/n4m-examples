@@ -1,0 +1,16 @@
+{
+	"id": "TREE-SCOUT-01B",
+	"description": "\"There's no way we'll ever be able to hack around these trees. If you can't find a way around by tomorrow, keep going until you do. You might want to take more supplies, come to think of it.\" \"I suppose,\" Alvin says, \"that you could always hunt for game in the copse if you needed too.\" \"This isn't your father's hunting ground,\" you say, \"but I suppose we could try.\"",
+	"options": [
+		{
+			"type": "action",
+			"prompt": "Wish him luck",
+			"complete": {
+				"location": "TREE-SCOUT-02",
+				"playerState": {
+					"alvinScouting": true
+				}
+			}
+		}
+	]
+}

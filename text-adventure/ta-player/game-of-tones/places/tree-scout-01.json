@@ -1,0 +1,20 @@
+{
+	"id": "TREE-SCOUT-01",
+	"description": "\"There's no sense making a decision until we have all the information,\" you say. \"Alvin, why don't you lead a scouting party? Take one man and enough supplies to camp overnight if a storm hits. Be sure you're back by nightfall tomorrow.\" \"What if it takes longer than that for us to find our way around the copse?\" Alvin asks.",
+	"options": [
+		{
+			"type": "action",
+			"prompt": "Turn back anyway",
+			"complete": {
+				"location": "TREE-SCOUT-01A"
+			}
+		},
+		{
+			"type": "action",
+			"prompt": "Keep going",
+			"complete": {
+				"location": "TREE-SCOUT-01B"
+			}
+		}
+	]
+}

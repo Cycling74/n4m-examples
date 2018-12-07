@@ -1,0 +1,13 @@
+{
+	"id": "TREE-PUZZLE",
+	"description": "The destination lies further south, but the way is blocked by a dense line of trees. They extend far to the east and west, though snowfall makes it hard to see how far. You hear someone ride up to your side. \"Not too far now, captain?\" It's the duke's son, Alvin, looking just a couple sizes too small on his expansive—and no doubt expensive—horse. \"I hope we don't have any trouble getting through these trees.\"",
+	"options": [
+		{
+			"type": "action",
+			"prompt": "Consider your choices",
+			"complete": {
+				"location": "TREE-EXPO-01"
+			}
+		}
+	]
+}

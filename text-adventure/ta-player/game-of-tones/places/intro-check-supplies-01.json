@@ -1,0 +1,20 @@
+{
+	"id": "INTRO-SUPPLIES",
+	"description": "Robert, the supplymaster, would be the one to ask about supplies. \"Robert,\" you call, only to see the man right at your side, hunched over something pressed together in his hands. \"What are you working on there?\" \"Coarse as sand,\" he says, \"and just as dry.\" As he pulls apart his hands, a cloud of snowy powder floats away in the wind." ,
+	"options": [
+		{
+			"type": "action",
+			"prompt": "Ask how he's feeling",
+			"complete": {
+				"location": "INTRO-FEELINGS"
+			}
+		},
+		{
+			"type": "action",
+			"prompt": "Ask about the supplies",
+			"complete": {
+				"location": "INTRO-SUPPLIES-02"
+			}
+		}
+	]
+}

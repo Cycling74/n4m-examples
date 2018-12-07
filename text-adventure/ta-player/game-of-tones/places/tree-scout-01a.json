@@ -1,0 +1,16 @@
+{
+	"id": "TREE-SCOUT-01A",
+	"description": "\"If it takes that long for two men on horseback to make their way around, then we'll never be able to bring the device the same way. Turn back if you can't find your way around by midday tomorrow.\" The reasoning is so obvious, you wonder for a second if it was a mistake sending Alvin to lead the scout. \"Of course, ma'am.\" He bows his head, then sets off to gather his supplies. Time to plan your next move.",
+	"options": [
+		{
+			"type": "action",
+			"prompt": "Consider your options",
+			"complete": {
+				"location": "TREE-SCOUT-02",
+				"playerState": {
+					"alvinScouting": true
+				}
+			}
+		}
+	]
+}
