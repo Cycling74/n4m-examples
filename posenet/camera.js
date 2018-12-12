@@ -65,7 +65,7 @@ async function setupCamera() {
 		"video": {
 			facingMode: "user",
 			width: mobile ? undefined : videoWidth,
-			height: mobile ? undefined : videoHeight
+			height: mobile ? undefined : videoHeight,
 		}
 	});
 	video.srcObject = stream;
@@ -77,6 +77,22 @@ async function setupCamera() {
 	});
 }
 
+async function changeVideoSource(newDevice) {
+	const video = document.getElementById("video");
+	video.srcObject = null;
+	const mobile = isMobile();
+	const stream = await navigator.mediaDevices.getUserMedia({
+		"audio": false,
+		"video": {
+			facingMode: "user",
+			width: mobile ? undefined : videoWidth,
+			height: mobile ? undefined : videoHeight,
+			deviceId: newDevice,
+		}
+	});
+	video.srcObject = stream;
+}
+
 async function loadVideo() {
 	const video = await setupCamera();
 	video.play();
@@ -84,8 +100,17 @@ async function loadVideo() {
 	return video;
 }
 
+async function listVideoDevices(){
+	const allDevices = await navigator.mediaDevices.enumerateDevices();
+	const videoDevices = allDevices.filter(device => device.kind === 'videoinput').map(device => device.label);
+	return videoDevices;
+}
+
 const guiState = {
 	algorithm: "single-pose",
+	devices: {
+		videoDevices: [],
+	},
 	input: {
 		mobileNetArchitecture: isMobile() ? "0.50" : "0.75",
 		outputStride: 16,
@@ -113,9 +138,8 @@ const guiState = {
 /**
  * Sets up dat.gui controller on the top-right of the window
  */
-function setupGui(cameras, net) {
+async function setupGui(cameras, net) {
 	guiState.net = net;
-
 	if (cameras.length > 0) {
 		guiState.camera = cameras[0].deviceId;
 	}
@@ -126,7 +150,17 @@ function setupGui(cameras, net) {
 	// person to be in the frame or results will be innaccurate. Multi-pose works
 	// for more than 1 person
 	const algorithmController =
-      gui.add(guiState, "algorithm", ["single-pose", "multi-pose"]);
+			gui.add(guiState, "algorithm", ["single-pose", "multi-pose"]);
+			
+	let devices = gui.addFolder("Devices");
+	const videoDevices = await listVideoDevices();
+	const videoDeviceController = devices.add(guiState.devices, "videoDevices", videoDevices);
+
+	videoDeviceController.onChange(async function (selectedDevice) {
+		const allDevices = await navigator.mediaDevices.enumerateDevices();
+		const matchedDeviceId = allDevices.filter(device => device.label === selectedDevice).map(device => device.deviceId);
+		changeVideoSource(matchedDeviceId);
+	});
 
 	// The input parameters have the most effect on accuracy and speed of the
 	// network
