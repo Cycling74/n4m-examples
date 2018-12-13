@@ -65,7 +65,7 @@ async function setupCamera() {
 		"video": {
 			facingMode: "user",
 			width: mobile ? undefined : videoWidth,
-			height: mobile ? undefined : videoHeight,
+			height: mobile ? undefined : videoHeight
 		}
 	});
 	video.srcObject = stream;
@@ -87,7 +87,7 @@ async function changeVideoSource(newDevice) {
 			facingMode: "user",
 			width: mobile ? undefined : videoWidth,
 			height: mobile ? undefined : videoHeight,
-			deviceId: newDevice,
+			deviceId: newDevice
 		}
 	});
 	video.srcObject = stream;
@@ -100,16 +100,16 @@ async function loadVideo() {
 	return video;
 }
 
-async function listVideoDevices(){
+async function listVideoDevices() {
 	const allDevices = await navigator.mediaDevices.enumerateDevices();
-	const videoDevices = allDevices.filter(device => device.kind === 'videoinput').map(device => device.label);
+	const videoDevices = allDevices.filter(device => device.kind === "videoinput").map(device => device.label);
 	return videoDevices;
 }
 
 const guiState = {
 	algorithm: "single-pose",
 	devices: {
-		videoDevices: [],
+		videoDevices: []
 	},
 	input: {
 		mobileNetArchitecture: isMobile() ? "0.50" : "0.75",
@@ -151,7 +151,7 @@ async function setupGui(cameras, net) {
 	// for more than 1 person
 	const algorithmController =
 			gui.add(guiState, "algorithm", ["single-pose", "multi-pose"]);
-			
+
 	let devices = gui.addFolder("Devices");
 	const videoDevices = await listVideoDevices();
 	const videoDeviceController = devices.add(guiState.devices, "videoDevices", videoDevices);
