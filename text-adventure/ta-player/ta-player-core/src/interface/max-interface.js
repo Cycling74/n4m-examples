@@ -15,7 +15,14 @@ class MaxInterface {
 				typewriter.pushPhraseToType("text", engine.someDescriptionJustToMakeSureItsWorking);
 			},
 			doOptionAtIndex: (idx) => {
-				engine.doEnabledOptionAtIndex(idx);
+				if (typewriter.isTyping) {
+					typewriter.flushAllPhrases();
+				} else {
+					engine.doEnabledOptionAtIndex(idx);
+				}
+			},
+			flush: () => {
+				typewriter.flushAllPhrases();
 			}
 		});
 	}

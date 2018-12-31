@@ -14,11 +14,6 @@ const UPDATE_KEYS = Object.freeze(
 	)
 );
 
-const OPTION_TYPES = Object.freeze({
-	action: true,
-	item: true
-});
-
 const OPTION_KEYS = Object.freeze({
 	complete: true,
 	count: true,
@@ -32,14 +27,12 @@ const OPTION_KEYS = Object.freeze({
 });
 
 const REQUIRED_KEYS = Object.freeze({
-	prompt: true,
-	type: true
+	prompt: true
 });
 
 class TAOption {
 	constructor(objectJSON) {
 		this._validateDescription(objectJSON);
-		this._type = objectJSON.type;
 		this._prompt = objectJSON.prompt;
 		this._failure = objectJSON.failure;
 		this._success = objectJSON.success;
@@ -122,9 +115,6 @@ class TAOption {
 				throw new Error(`Missing required field ${key}`);
 			}
 		});
-		if (!OPTION_TYPES[objectJSON.type]) {
-			throw new Error(`Invalid option type ${objectJSON.type}`);
-		}
 		if (!!objectJSON.enabled) {
 			Object.keys(objectJSON.enabled).forEach(key => {
 				if (!CONDITION_KEYS[key]) {

@@ -30,14 +30,8 @@ class TATypewriter extends EventEmitter {
 		};
 	}
 
-	_flushPhraseForKeyword(keyword) {
-		if (!!this._phrases[keyword]) {
-			this.emit("type", keyword, this._phrases[keyword]);
-			if (!!this._timers[keyword]) clearInterval(this._timers[keyword]);
-			delete this._timers[keyword];
-			delete this._positions[keyword];
-			delete this._phrases[keyword];
-		}
+	get isTyping() {
+		return this._phrases.length > 0;
 	}
 
 	flushAllPhrases() {
@@ -45,9 +39,10 @@ class TATypewriter extends EventEmitter {
 			clearTimeout(this._timer);
 			this._timer = null;
 		}
-		Object.keys(this._phrases).forEach(phrase => {
+		this._phrases.forEach(phrase => {
 			this.emit("type", phrase.keyword, phrase.phrase);
 		});
+		this._phrases = [];
 	}
 
 	pushPhraseToType(keyword, phrase) {
