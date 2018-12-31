@@ -3,7 +3,6 @@
 	"description": "\"How are our supplies?\" you ask. \"Should be alright. Stuck in the snow for as long as we were during that last storm, we might have dug into our reserver a bit, but provided this calm weather holds we should be able to make it back. At least we don't have to worry about spoilage in this weather.\"" ,
 	"options": [
 		{
-			"type": "action",
 			"prompt": "Finish talking to Robert",
 			"complete": {
 				"location": "INTRO"

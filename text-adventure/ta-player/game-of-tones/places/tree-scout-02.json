@@ -3,18 +3,15 @@
 	"description": "Having sent Alvin off to make preparations, you consider your options. It might be best to strike camp now, to give the team time to rest. On the other hand, there's still enough daylight to organize a hunting expedition, which might help gather additional supplies. Finally, you could try to make some headway on a path through the trees, just in case Alvin isn't able to find a path around.",
 	"options": [
 		{
-			"type": "action",
 			"prompt": "Strike camp",
 			"complete": {
 				"location": "CAMPING-01"
 			}
 		},
 		{
-			"type": "action",
 			"prompt": "Go hunting"
 		},
 		{
-			"type": "action",
 			"prompt": "Start cutting"
 		}
 	]

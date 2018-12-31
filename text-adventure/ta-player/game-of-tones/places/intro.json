@@ -3,7 +3,6 @@
 	"description": "Sharp as a knife, the ice-cold air slices through your thick coat. All around you is the sound of trees bending and snapping in the frozen wind. You pat your horse's neck, wondering if she's ever been this far south before.",
 	"options": [
 		{
-			"type": "action",
 			"prompt": "Check your map",
 			"complete": {
 				"location": "INTRO-MAP",
@@ -13,7 +12,6 @@
 			}
 		},
 		{
-			"type": "action",
 			"prompt": "Check your supplies",
 			"complete": {
 				"location": "INTRO-SUPPLIES",
@@ -23,7 +21,6 @@
 			}
 		},
 		{
-			"type": "action",
 			"prompt": "Plan your advance",
 			"complete": {
 				"location": "TREE-PUZZLE"
