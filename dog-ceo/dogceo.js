@@ -1,4 +1,4 @@
-"use strict";
+
 
 // fs is a Node module for working with the file system
 const fs = require("fs");

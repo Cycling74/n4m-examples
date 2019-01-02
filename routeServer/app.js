@@ -5,7 +5,7 @@
 //          something else (like Angular or React), you will need to change
 //          the view engine.
 // ------------------------------------------------------------------------
-"use strict";
+
 
 let express = require("express");
 let path = require("path");

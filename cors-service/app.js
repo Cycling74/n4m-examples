@@ -6,7 +6,6 @@
 //          the view engine.
 // ------------------------------------------------------------------------
 
-"use strict";
 
 var express = require("express");
 var path = require("path");

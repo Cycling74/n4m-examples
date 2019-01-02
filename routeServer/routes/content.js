@@ -7,7 +7,7 @@
 //              message with a file path.
 //
 // --------------------------------------------------------------------------
-"use strict";
+
 
 const MaxMSP = require("max-api");
 

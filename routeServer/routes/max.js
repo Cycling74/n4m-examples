@@ -4,7 +4,7 @@
 //          the brokering mechanism provided in the message_broker.js source.
 //
 // --------------------------------------------------------------------------
-"use strict";
+
 
 let express = require("express");
 let router = new express.Router();
