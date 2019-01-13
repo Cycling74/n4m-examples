@@ -1,10 +1,10 @@
 # nature of code
 
 
-these patchs are nodejs version of the Processing exampels 
+these patches are nodejs version of the Processing examples 
 in the Nature of Code by Daniel Shiffman
 
-I still need to do some editing. I still need to add code so nodejs libs are added
+I still need to do some editing. I still need to add code so nodejs libs are added to patches
 ***
 
 ## Files
