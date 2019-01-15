@@ -42,19 +42,3 @@ console.log("magOutput")
 
     
 });
-maxAPI.addHandler("headingVector", (...args) => {
-	var vector1 = [args[0], args[1]];
-    var vector2 = [args[2], args[3]];
-    console.log(args[0])
-    console.log(args[1])
-    console.log(args[2])
-    console.log(args[3])
-    console.log("test")
-    console.log(new Victor(0, 0).subtract(new Victor(300, 200)).toString());
-    
-
-
-	var head = (heading(vector1,vector2)) * 180 / Math.PI	
-    maxAPI.outlet(head);
-    maxAPI.outlet("headingVectorOutput",head);
-});
