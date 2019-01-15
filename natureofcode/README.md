@@ -31,9 +31,10 @@ I still need to do some editing. I still need to add code so nodejs libs are add
 
 ## Usage
 
-1. Add dot-object, vectors
-2. Launch  `NOC_excersize 1.1 ball no vectors.maxpat` Max patch.
+1. Add dot-object, Victorjs http://victorjs.org/ vectors
+2. NOC_excercise_1.5_Vector magnitudeFinal.maxpat
 3. Launch  `NOC_excersize 1.1 ball no vectors.maxpat` Max patch.
-3. Launch  `excercise_1.5_Vector magnitude.maxpat` Max patch.
+4. Launch  `NOC_excersize 1.1 ball no vectors.maxpat` Max patch.
+5. Launch  `excercise_1.5_Vector magnitude.maxpat` Max patch.
 
 3. Type in the [textedit] object and hit Enter. You will see this text in the Max Console.
