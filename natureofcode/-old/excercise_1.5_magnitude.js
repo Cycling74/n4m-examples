@@ -6,35 +6,39 @@ var add = require('vectors/add')(2)
 var mag = require('vectors/mag')(2)
 var sub = require('vectors/sub')(2)
 var dot = require('dot-object');
+var Victor = require('victor')
+var heading = require("vectors/heading")(2)
 var location = [100,100];
 var velocity = [2.5,5];
 var center = []
 var mouse = [];
 var magMouse;
-maxAPI.addHandler("locationVelocity", (...args) => 
+maxAPI.addHandler("vectorMag", (...args) => 
 	{
-    mouse = [args[0],args[1]];
-    center = [0,0];
-    magMouse= mag(mouse);
     
-    console.log(mag(mouse));
-    sub(mouse,center);
-
-    //fill(0);
-    //rect(0,0,m,10);
-    //translate(width/2,height/2);
-    //line(0,0,mouse.x,mouse.y);
-    console.log(mouse[0]);
-    console.log(mouse[1]);
-
-    console.log(center[0]);
-    console.log(center[1]);
-    maxAPI.outlet("posX",mouse[0]);
-    maxAPI.outlet("posY",mouse[1]);
-
-    maxAPI.outlet("posCenterX",center[0]);
-    maxAPI.outlet("posCenterY",center[1]);
-    maxAPI.outlet("magMouse",magMouse);
+    var mouse = new Victor(args[0], args[1]);
+    var test = new Victor(100,100);
+	center = new Victor(300,200);
     
+	console.log(args[0]);
+    console.log(args[1]);
+    console.log("centerX" + center.x);
+    console.log("centerY" + center.y);
+    console.log("mouseX" + mouse.x);
+    console.log("mouseY" + mouse.y);
+     
+	var ret = mouse.subtract(center);
+    console.log("mouseSub" + mouse.toString());
+    var magOutput = mouse.magnitude();
+
+console.log("magOutput")
+     console.log(magOutput);
+   
+    //maxAPI.outlet(magOutput);
+    maxAPI.outlet("magVectorOutput",magOutput);
+    
+    //maxAPI.outlet("magVectorOutput",magOutput);
+
+
     
 });
