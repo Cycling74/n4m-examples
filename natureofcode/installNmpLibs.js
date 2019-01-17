@@ -1,0 +1,6 @@
+/* 
+load librairies
+	victorjs
+	random
+	mathjs 
+*/
