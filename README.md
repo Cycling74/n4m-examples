@@ -22,6 +22,8 @@ You might find an error in an example, or have a request for a example you would
 * [watch-youtube](https://github.com/Cycling74/n4m-examples/tree/master/watch-youtube): Stream YouTube videos from Max. By Julian from [Znibbles](https://www.znibbl.es).
 * [PoseNet](https://github.com/Cycling74/n4m-examples/tree/master/posenet): Real-time Human Pose Estimation via webcam. By Yuichi Yogo.
 * [Electron-boilerplate](https://github.com/Cycling74/n4m-examples/tree/master/electron-boilerplate): A plain boilerplate and guides to develop an electron app for Max. By Yuichi Yogo.
+* [nodeLOM](https://github.com/iamjoncannon/nodeLOM): Enable Node.js to manipulate a Live session in real time and stream session data externally. By Jonathan Cannon.
+
 
 ## Adding your own Example
 

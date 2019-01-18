@@ -1,0 +1,25 @@
+{
+  "name": "maxLOM",
+  "version": "1.0.0",
+  "description": "Leverages the recently added Node.js object in Max For Live to update a previous npm package - \"max4node\" https://www.npmjs.com/package/max4node - using the socket.io library instead of the Max UDP object to communicate with an external server.",
+  "main": "main.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamjoncannon/maxLOM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamjoncannon/maxLOM/issues"
+  },
+  "homepage": "https://github.com/iamjoncannon/maxLOM#readme"
+}
