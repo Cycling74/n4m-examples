@@ -4,7 +4,7 @@
 //          the brokering mechanism provided in the message_broker.js source.
 //
 // --------------------------------------------------------------------------
-"use strict";
+
 
 let express = require("express");
 let router = new express.Router();
@@ -19,7 +19,7 @@ let broker = require("../js/message_broker");
 // ------------------------------------------------------------------------
 
 MaxMSP.addHandler("test", (args) => console.log(args));
-MaxMSP.addHandler(MaxMSP.MESSAGE_TYPES.ALL, (handled, args) => {
+MaxMSP.addHandler(MaxMSP.MESSAGE_TYPES.ALL, (handled, ...args) => {
 	if (!handled) {
 		broker.brokerMessage(args);
 	}

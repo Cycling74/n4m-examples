@@ -1,9 +1,8 @@
-"use strict";
-
 const fs = require("fs");
-const csvString = fs.readFileSync("./data/data.csv", "UTF-8").toString();
 
 module.exports = function (d3, svg, options) {
+
+	const csvString = fs.readFileSync("./data/data.csv", "UTF-8").toString();
 
 	let g = svg.append("g").attr("transform", "translate(" + options.margin.left + "," + options.margin.top + ")");
 

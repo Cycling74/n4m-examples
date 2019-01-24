@@ -4,7 +4,6 @@
 //                  with any requesting pages. This is part of the Node for
 //                  Max system for Max 8.
 // --------------------------------------------------------------------------
-"use strict";
 
 const express = require("express");
 const http = require("http");

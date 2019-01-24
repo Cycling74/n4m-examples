@@ -3,7 +3,7 @@
 // upload.js - the route handler for an upload 'request'.
 //
 // --------------------------------------------------------------------------
-"use strict";
+
 
 var express = require("express");
 var router = new express.Router();

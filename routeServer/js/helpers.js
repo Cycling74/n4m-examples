@@ -3,7 +3,7 @@
 // helpers.js : provide some message-based helper functions.
 //
 // --------------------------------------------------------------------------
-"use strict";
+
 
 const MaxMSP = require("max-api");
 

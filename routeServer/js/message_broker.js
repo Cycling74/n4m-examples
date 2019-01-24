@@ -5,7 +5,7 @@
 //                     any listeners that go 'dead'.
 //
 // --------------------------------------------------------------------------
-"use strict";
+
 
 let uuidv1 = require("uuid/v1");
 
@@ -36,21 +36,23 @@ let MessageBroker = {
 	// When a message comes in, send it to the listener that has a matching
 	// uuid field. Reject the message if it is not the proper type, or if
 	// it doesn't have a uuid field.
-	brokerMessage: function (args = {}) {
-		// we only accept json-based objects as input.
-		if (typeof args !== "object") {
+	brokerMessage: function (args = []) {
+		// we only accept dictionaries as input
+		if (args[0] !== "dict" || args.length !== 2) {
 			console.log("invalid message - only dictionaries accepted as messages");
 			return;
 		}
 
+		const content = args[1];
+
 		// the object has to have a uuid property
-		if (!args.hasOwnProperty("uuid")) {
+		if (!content.hasOwnProperty("uuid")) {
 			console.log("invalid message - dictionary must contain a uuid value");
 			return;
 		}
 
 		// the uuid has to be 'all', or be in the current list of listeners
-		if ((args.uuid !== "all") && !this.listeners.some(e => e.uuid === args.uuid)) {
+		if ((content.uuid !== "all") && !this.listeners.some(e => e.uuid === content.uuid)) {
 			console.log("invalid message - the passed uuid does not match any listeners");
 			return;
 		}
@@ -58,8 +60,8 @@ let MessageBroker = {
 		// spin through the listeners and send out matches
 		this.listeners.forEach((v, i) => {
 			try {
-				if ((args.uuid === "all") || (args.uuid === v.uuid)) {
-					v.callback(args);
+				if ((content.uuid === "all") || (content.uuid === v.uuid)) {
+					v.callback(content);
 				}
 			}
 			catch (e) {

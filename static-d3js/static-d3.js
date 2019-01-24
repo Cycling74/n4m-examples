@@ -1,9 +1,12 @@
-"use strict";
-
 const maxApi = require("max-api");
 const fs = require("fs");
+const path = require("path");
+const Buffer = require("safe-buffer").Buffer;
 const D3Node = require("d3-node");
 const svg2png = require("svg2png");
+const promisify = require("util").promisify;
+const readFileAsync = promisify(fs.readFile);
+const writeFileAsync = promisify(fs.writeFile);
 
 let styleFile = "style.css";
 
@@ -11,8 +14,8 @@ maxApi.addHandler("style", (file) => {
 	styleFile = file;
 });
 
-maxApi.addHandler("d3", (inputFile) => {
-	const styles = fs.readFileSync(`./data/${styleFile}`);
+maxApi.addHandler("d3",  async (inputFile) => {
+	const styles = await readFileAsync(`./data/${styleFile}`);
 
 	var options = {
 		styles
@@ -32,13 +35,16 @@ maxApi.addHandler("d3", (inputFile) => {
 
 	var svg = d3n.createSVG(svgWidth, svgHeight);
 
-	require(`./data/${inputFile || "chart.js"}`)(d3, svg, { width, height, margin });
+	const inputPath = "./" + path.join("data", inputFile || "chart.js");
+	require(inputPath)(d3, svg, { width, height, margin });
 
-	var svgBuffer = new Buffer(d3n.svgString(), "utf-8");
-	svg2png(svgBuffer)
-		.then(buffer => fs.writeFile(`./data/${inputFile.slice(0, -3)}.png`, buffer, (err) => {
-			if (err) throw err;
-			maxApi.outlet("filepath", `${__dirname}/data/${inputFile.slice(0, -3)}.png`);
-		}))
-		.catch(e => console.error("ERR:", e));
+	var svgBuffer = Buffer.from(d3n.svgString(), "utf-8");
+	const buffer = await svg2png(svgBuffer);
+	try {
+		const outputFile = `${inputFile.slice(0, -3)}.png`;
+		await writeFileAsync(path.join("data", outputFile), buffer);
+		await maxApi.outlet("filepath", path.join(__dirname, "data", outputFile));
+	} catch (e) {
+		console.error("ERR:", e);
+	}
 });
