@@ -2,10 +2,6 @@
 
 The Node for Max Examples repository is an open source project, and contributions and help from the community is strongly encouraged and important to improve the software. Here are some things we'd like you to keep in mind in order to help with keeping the process smooth and organized.
 
-## Adding an Example
-
-For steps to add your own example to the collection, foloow the instructions in the [README](https://github.com/Cycling74/n4m-examples/blob/master/README.md#adding-your-own-example).
-
 ## Bug Reports / Example Suggestions
 
 If you've come across a bug in one of the examples, would like to suggest a new example, suggest an enhancement to a current example, or just ask a question, please use the GitHub Issues section for [n4m-examples][issues]. In order to make things easier for the maintainers and others the following would be helpful:
