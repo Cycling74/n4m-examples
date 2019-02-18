@@ -1,7 +1,17 @@
+<p align="center">
+	<img src="https://docs.cycling74.com/nodeformax/api/n4m-icon.png" width="200" height="200" alt="Node For Max">
+</p>
+
 # Node For Max Examples
 [![Build Status](https://travis-ci.org/Cycling74/n4m-examples.svg?branch=master)](https://travis-ci.org/Cycling74/n4m-examples)
 
-Hey Maxers! This repository contains many examples of how to use the Node For Max package in your Max patches created by Cycling '74. If you created your own example you would like to showcase, please submit it to the [community repository](https://github.com/Cycling74/n4m-community). We love community contributions!
+Hey Maxers! This repository contains many examples of how to use the Node For Max package in your Max patches created by Cycling '74.
+
+## Other Resources
+
+If you created your own example you would like to showcase, please submit it to the [community repository](https://github.com/Cycling74/n4m-community). We love community contributions!
+
+Looking for more basic examples to learn the core concepts of Node For Max? The [n4m-core-examples](https://github.com/Cycling74/n4m-core-examples) repository has a growing list that can help learning the core techniques and principles of using Node For Max.
 
 ## List of Examples
 
