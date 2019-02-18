@@ -33,4 +33,4 @@ We have adopted a Code of Conduct that we expect every participant to adhere to.
 
 ## LICENSE
 
-[MIT](./LICENSE.md)
+[MIT](./LICENSE)
