@@ -23,11 +23,11 @@ The main purpose of this repository is to show complete yet limited in scope pro
 
 Note that we are not accepting community-created examples in this repository; however, we are taking suggestions for examples you would like to see Cycling '74 create. If you'd like to showcase your work please visit the [community repository](https://github.com/Cycling74/n4m-community)
 
-### [Contributing Guide](CONTRIBUTING.md)
+### Contributing Guide
 
 You might find an error in an example, or have a request for a example you would like to see. You can report this by [submitting an issue](https://github.com/Cycling74/n4m-examples/issues/new) to this repository. Note that you will need to have a GitHub account to submit an issue. See the full [Contributing Guide](./CONTRIBUTING.md) for more details on how to participate in this project.
 
-### [Code of Conduct](CODE_OF_CONDUCT.md)
+### Code of Conduct
 
 We have adopted a Code of Conduct that we expect every participant to adhere to. You can find the full text [here](./CODE_OF_CONDUCT.md).
 
