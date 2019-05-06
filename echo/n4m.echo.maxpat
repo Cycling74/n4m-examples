@@ -152,7 +152,7 @@
 						"watch" : 0
 					}
 ,
-					"text" : "node.script echo.js"
+					"text" : "node.script n4m.echo.js"
 				}
 
 			}
