@@ -654,7 +654,7 @@
 						"watch" : 0
 					}
 ,
-					"text" : "node.script chords.js"
+					"text" : "node.script n4m.chords.js"
 				}
 
 			}
