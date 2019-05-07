@@ -8,7 +8,7 @@ Note: Before you run this example, make sure that you run the npm install embedd
 ## Files
 
 `chord-builder.maxpat` : The Max patch to run the example.<br />
-`chords.js` : The launcher JS for the NodeJS script.<br />
+`n4m.chords.js` : The launcher JS for the NodeJS script.<br />
 `poly.phatness.maxpat` : The Max patch for the [poly~] synthesizer.<br />
 `package.json` : The Node package file.<br />
 `README.md` : This file!<br />
