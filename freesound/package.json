@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/Cycling74/n4m-examples#readme",
   "dependencies": {
+    "axios": "^1.3.4",
     "dotenv": "^6.0.0",
-    "freesound": "git+https://git@github.com/Girlfriends/freesound.js.git",
     "tmp": "0.0.33"
   }
 }
