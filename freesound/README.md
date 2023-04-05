@@ -15,14 +15,14 @@ Freesound only hands out client keys, not access keys. So, whereas using the
 access keys someone could post tweets from your Twitter account, the same
 isn't true for Freesound.
 
-5. Anyway, note down the client ID and API key.
+5. Anyway, note down the Client ID and API key.
 
 6. In this freesound folder, you should see a file named .env-template. This is
 an environment file, it contains key-value pairs that other applications, like
 Node, can load before running.
 
 7. Duplicate the .env-template file to a new file named ".env". It must be named
-".env", not "my.env" or anything like that. Fill in this file using the keys
+".env", not "my.env" or anything like that. Fill in this file using the API credentials
 you got from Freesound.
 
 8. You should be all set. Open the Max patcher freesound.maxpat and see!
