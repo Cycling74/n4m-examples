@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "commonjs",
+    "declaration": true,
+    "noImplicitAny": false,
+    "strict": true,
+		"incremental": true,
+		"esModuleInterop": true,
+    "outDir": "lib"
+  },
+	"include": [
+		"./src"
+	]
+}

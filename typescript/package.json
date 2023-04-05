@@ -1,0 +1,15 @@
+{
+  "name": "n4m-ts",
+  "version": "0.0.0",
+  "description": "Use N4M with Typescript",
+  "author": "Cycling '74",
+  "license": "ISC",
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "devDependencies": {
+    "@types/max-api": "^2.0.0",
+    "@types/node": "^16.18.23",
+    "typescript": "^5.0.3"
+  }
+}
